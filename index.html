@@ -2687,6 +2687,16 @@ if (correo) {
   correo.textContent = "andrea.saldarriagacadavid04@gmail.com";
   correo.href = "mailto:andrea.saldarriagacadavid04@gmail.com";
 }
+  
+const primerParrafo = document.querySelector(".about-text .about-description");
+if (primerParrafo) {
+  primerParrafo.textContent = "Mi experiencia combina investigación de mercados, análisis de datos, inteligencia comercial y marketing digital.";
+}
+
+const bannerFotos = document.querySelector('img[src*="sample-work.jpg"]');
+if (bannerFotos) {
+  bannerFotos.parentElement.parentElement.remove();
+}
 })();
 </script>
 </body>
