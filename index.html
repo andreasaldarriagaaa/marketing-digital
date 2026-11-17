@@ -1,2703 +1,937 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrea Saldarriaga Cadavid — Marketing & Product Mindset</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta_title">Andrea Saldarriaga | Marketing Intelligence &amp; Consumer Insights</title>
+  <meta name="description" content="Portafolio profesional de Andrea Saldarriaga: investigación de mercados, consumer insights, análisis de datos y marketing digital orientados a decisiones de negocio." data-i18n-attr="content:meta_description">
+  <link rel="canonical" href="https://andreasaldarriagaaa.github.io/marketing-digital/">
+  <link rel="alternate" hreflang="es" href="https://andreasaldarriagaaa.github.io/marketing-digital/?lang=es">
+  <link rel="alternate" hreflang="en" href="https://andreasaldarriagaaa.github.io/marketing-digital/?lang=en">
+  <link rel="alternate" hreflang="fr" href="https://andreasaldarriagaaa.github.io/marketing-digital/?lang=fr">
+  <link rel="alternate" hreflang="x-default" href="https://andreasaldarriagaaa.github.io/marketing-digital/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://andreasaldarriagaaa.github.io/marketing-digital/">
+  <meta property="og:title" content="Andrea Saldarriaga | Marketing Intelligence &amp; Consumer Insights" data-i18n-attr="content:meta_title">
+  <meta property="og:description" content="Portafolio profesional de Andrea Saldarriaga: investigación de mercados, consumer insights, análisis de datos y marketing digital orientados a decisiones de negocio." data-i18n-attr="content:meta_description">
+  <meta property="og:image" content="https://andreasaldarriagaaa.github.io/marketing-digital/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Andrea Saldarriaga | Marketing Intelligence &amp; Consumer Insights" data-i18n-attr="content:meta_title">
+  <meta name="twitter:description" content="Portafolio profesional de Andrea Saldarriaga: investigación de mercados, consumer insights, análisis de datos y marketing digital orientados a decisiones de negocio." data-i18n-attr="content:meta_description">
+  <meta name="twitter:image" content="https://andreasaldarriagaaa.github.io/marketing-digital/img/og.jpg">
+  <meta name="theme-color" content="#48182F">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Andrea Saldarriaga Cadavid", "jobTitle": "Marketing Intelligence & Consumer Insights", "url": "https://andreasaldarriagaaa.github.io/marketing-digital/", "sameAs": ["https://www.linkedin.com/in/andrea-saldarriagac/"], "email": "andrea.saldarriagacadavid04@gmail.com", "alumniOf": {"@type": "CollegeOrUniversity", "name": "UCAM · Universidad Católica San Antonio de Murcia"}, "knowsLanguage": ["es", "en", "fr", "pt"]}</script>
   <style>
-    /* ========== CSS VARIABLES ========== */
-    :root {
-      --cream: #D4CBC4;
-      --cream-light: #E8E2DD;
-      --cream-pale: #F3EFEC;
-      --cream-dark: #B8AFA8;
-      --wine: #48182F;
-      --wine-light: #6B2D4A;
-      --wine-dark: #350F22;
-      --white: #FAFAF8;
-      --black: #1A1A1A;
-      --font-main: 'League Spartan', sans-serif;
-      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    /* ========== RESET & BASE ========== */
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      cursor: none;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background: var(--white);
-      color: var(--black);
-      overflow-x: hidden;
-      cursor: none;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      cursor: none;
-    }
-
-    button {
-      cursor: none;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    ::selection {
-      background: var(--wine);
-      color: var(--cream-light);
-    }
-
-    /* ========== CUSTOM CURSOR — TRAIL LINE ========== */
-    .cursor-trail-canvas {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 99999;
-    }
-
-    /* Small dot at actual cursor position — hidden, trail only */
-    .cursor-dot {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      pointer-events: none;
-      z-index: 100000;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-    }
-
-    .cursor-dot.hovering {
-      width: 0;
-      height: 0;
-      opacity: 0;
-    }
-
-    /* ========== PRELOADER ========== */
-    .preloader {
-      position: fixed;
-      inset: 0;
-      background: var(--wine-dark);
-      z-index: 100000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.8s var(--ease-out-expo), visibility 0.8s;
-    }
-
-    .preloader.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .preloader-text {
-      font-family: var(--font-main);
-      font-size: clamp(1.5rem, 4vw, 3rem);
-      color: var(--cream-light);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      overflow: hidden;
-    }
-
-    .preloader-text span {
-      display: inline-block;
-      animation: slideUp 0.6s var(--ease-out-expo) forwards;
-      opacity: 0;
-      transform: translateY(100%);
-    }
-
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ========== NAVIGATION ========== */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 1.5rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      mix-blend-mode: difference;
-    }
-
-    .nav-logo {
-      font-family: var(--font-main);
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: var(--font-main);
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #fff;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      position: relative;
-      padding-bottom: 2px;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--cream);
-      transition: width 0.4s var(--ease-out-expo);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    /* Hamburger button */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 28px;
-      height: 28px;
-      background: none;
-      border: none;
-      padding: 0;
-      z-index: 1002;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: transform 0.4s var(--ease-out-expo),
-        opacity 0.3s;
-    }
-
-    .hamburger.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .hamburger.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    /* Mobile menu overlay */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: var(--wine-dark);
-      z-index: 1001;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.5s var(--ease-out-expo),
-        visibility 0.5s;
-    }
-
-    .mobile-menu.open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .mobile-menu a {
-      font-family: var(--font-main);
-      font-size: clamp(1.8rem, 6vw, 2.5rem);
-      font-weight: 800;
-      color: var(--cream-light);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.8rem 0;
-      position: relative;
-      transition: color 0.3s;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .mobile-menu.open a {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .mobile-menu a:nth-child(1) { transition: opacity 0.4s 0.1s, transform 0.4s 0.1s, color 0.3s; }
-    .mobile-menu a:nth-child(2) { transition: opacity 0.4s 0.15s, transform 0.4s 0.15s, color 0.3s; }
-    .mobile-menu a:nth-child(3) { transition: opacity 0.4s 0.2s, transform 0.4s 0.2s, color 0.3s; }
-    .mobile-menu a:nth-child(4) { transition: opacity 0.4s 0.25s, transform 0.4s 0.25s, color 0.3s; }
-    .mobile-menu a:nth-child(5) { transition: opacity 0.4s 0.3s, transform 0.4s 0.3s, color 0.3s; }
-
-    .mobile-menu a:hover {
-      color: #fff;
-    }
-
-    .mobile-lang-switcher {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: 2.5rem;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .mobile-menu.open .mobile-lang-switcher {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.4s 0.4s, transform 0.4s 0.4s;
-    }
-
-    .mobile-lang-switcher .lang-btn {
-      font-size: 0.85rem;
-      padding: 0.5rem 1rem;
-      border-color: rgba(212,203,196,0.3);
-      color: var(--cream-light);
-    }
-
-    .mobile-lang-switcher .lang-btn.active {
-      background: rgba(212,203,196,0.2);
-      border-color: var(--cream);
-    }
-
-    /* ========== SCROLL REVEAL ========== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(60px);
-      transition: opacity 0.9s var(--ease-out-expo),
-        transform 0.9s var(--ease-out-expo);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-left {
-      opacity: 0;
-      transform: translateX(-80px);
-      transition: opacity 0.9s var(--ease-out-expo),
-        transform 0.9s var(--ease-out-expo);
-    }
-
-    .reveal-left.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .reveal-right {
-      opacity: 0;
-      transform: translateX(80px);
-      transition: opacity 0.9s var(--ease-out-expo),
-        transform 0.9s var(--ease-out-expo);
-    }
-
-    .reveal-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .reveal-scale {
-      opacity: 0;
-      transform: scale(0.92);
-      transition: opacity 0.7s var(--ease-out-expo),
-        transform 0.7s var(--ease-out-expo);
-    }
-
-    .reveal-scale.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* ========== HERO ========== */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      background: var(--white);
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      right: -15%;
-      width: 650px;
-      height: 650px;
-      background: radial-gradient(circle, rgba(212, 203, 196, 0.5) 0%, transparent 65%);
-      border-radius: 50%;
-      animation: floatBlob 12s ease-in-out infinite;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -15%;
-      left: -10%;
-      width: 550px;
-      height: 550px;
-      background: radial-gradient(circle, rgba(72, 24, 47, 0.06) 0%, transparent 65%);
-      border-radius: 50%;
-      animation: floatBlob 15s ease-in-out infinite reverse;
-    }
-
-    @keyframes floatBlob {
-
-      0%,
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
-
-      33% {
-        transform: translate(30px, -30px) scale(1.05);
-      }
-
-      66% {
-        transform: translate(-20px, 20px) scale(0.95);
-      }
-    }
-
-    .hero-subtitle {
-      font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-      font-weight: 700;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--wine);
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-name {
-      font-size: clamp(3rem, 10vw, 9rem);
-      font-weight: 900;
-      line-height: 0.92;
-      letter-spacing: -0.03em;
-      color: var(--black);
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-      text-transform: uppercase;
-    }
-
-    .hero-name .accent {
-      color: var(--wine);
-    }
-
-    .hero-tagline {
-      font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-      font-weight: 400;
-      color: var(--cream-dark);
-      max-width: 520px;
-      line-height: 1.7;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      z-index: 1;
-    }
-
-    .hero-scroll-indicator span {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--cream-dark);
-    }
-
-    .scroll-line {
-      width: 1px;
-      height: 50px;
-      background: linear-gradient(to bottom, var(--wine), transparent);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes scrollPulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scaleY(1);
-      }
-
-      50% {
-        opacity: 0.3;
-        transform: scaleY(0.5);
-      }
-    }
-
-    /* ========== DIVIDER ========== */
-    .color-strip {
-      height: 3px;
-      background: linear-gradient(90deg, var(--cream), var(--wine), var(--cream-dark), var(--wine-light), var(--cream));
-      background-size: 300% 100%;
-      animation: gradientMove 8s linear infinite;
-      position: relative;
-      z-index: 3;
-    }
-
-    @keyframes gradientMove {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      100% {
-        background-position: 300% 50%;
-      }
-    }
-
-    /* ========== SECTION SHARED ========== */
-    section {
-      padding: 7rem 3rem;
-    }
-
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--wine);
-      margin-bottom: 0.8rem;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 800;
-      color: var(--black);
-      line-height: 1.05;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-    }
-
-    .section-subtitle {
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--cream-dark);
-      max-width: 550px;
-      line-height: 1.6;
-    }
-
-    /* ========== STATS ========== */
-    .stats-strip {
-      display: flex;
-      justify-content: center;
-      gap: 5rem;
-      padding: 4rem 2rem;
-      background: var(--cream-pale);
-    }
-
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      font-weight: 900;
-      color: var(--wine);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--cream-dark);
-      margin-top: 0.5rem;
-    }
-
-    /* ========== PROJECTS / GALLERY ========== */
-    #proyectos {
-      background: var(--white);
-    }
-
-    .gallery-header {
-      max-width: 1400px;
-      margin: 0 auto 3rem;
-    }
-
-    /* ALIGNED UNIFORM GRID */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .project-card {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 1 / 1;
-      background: var(--cream-pale);
-      transition: transform 0.5s var(--ease-out-expo),
-        box-shadow 0.5s var(--ease-out-expo);
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(72, 24, 47, 0.15);
-    }
-
-    .project-card img {
-      transition: transform 0.6s var(--ease-out-expo);
-    }
-
-    .project-card:hover img {
-      transform: scale(1.08);
-    }
-
-    /* overlay removed - clean hover effect only */
-
-    /* ========== EXPERIENCE SECTION ========== */
-    #experiencia {
-      background: var(--wine-dark);
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-
-    #experiencia::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(212, 203, 196, 0.06) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    #experiencia .section-label {
-      color: var(--cream);
-    }
-
-    #experiencia .section-title {
-      color: #fff;
-    }
-
-    #experiencia .section-subtitle {
-      color: rgba(212, 203, 196, 0.6);
-    }
-
-    .exp-header {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-    }
-
-    .exp-timeline {
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    /* Timeline center line */
-    .exp-timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, transparent, var(--cream-dark), var(--cream-dark), transparent);
-      transform: translateX(-50%);
-    }
-
-    .exp-item {
-      display: grid;
-      grid-template-columns: 1fr 60px 1fr;
-      align-items: start;
-      margin-bottom: 4rem;
-      position: relative;
-    }
-
-    .exp-item:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Timeline dot */
-    .exp-dot-col {
-      display: flex;
-      justify-content: center;
-      padding-top: 0.5rem;
-    }
-
-    .exp-dot {
-      width: 14px;
-      height: 14px;
-      background: var(--wine-light);
-      border: 3px solid var(--cream);
-      border-radius: 50%;
-      position: relative;
-      z-index: 2;
-      transition: transform 0.3s var(--ease-out-expo),
-        background 0.3s;
-    }
-
-    .exp-item:hover .exp-dot {
-      transform: scale(1.4);
-      background: var(--cream);
-    }
-
-    /* Left side - company info */
-    .exp-company {
-      text-align: right;
-      padding-right: 2rem;
-    }
-
-    .exp-company-name {
-      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      color: #fff;
-      margin-bottom: 0.3rem;
-      transition: color 0.3s;
-    }
-
-    .exp-item:hover .exp-company-name {
-      color: var(--cream);
-    }
-
-    .exp-role {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--cream);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 0.3rem;
-    }
-
-    .exp-date {
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: rgba(212, 203, 196, 0.4);
-      letter-spacing: 0.1em;
-    }
-
-    /* Right side - description */
-    .exp-details {
-      padding-left: 2rem;
-    }
-
-    .exp-description {
-      font-size: 0.95rem;
-      font-weight: 300;
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.65);
-      margin-bottom: 1rem;
-    }
-
-    .exp-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .exp-tag {
-      padding: 0.35rem 0.9rem;
-      border: 1px solid rgba(212, 203, 196, 0.2);
-      border-radius: 50px;
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: rgba(212, 203, 196, 0.6);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: background 0.3s, color 0.3s, border-color 0.3s;
-    }
-
-    .exp-tag:hover {
-      background: var(--cream);
-      border-color: var(--cream);
-      color: var(--wine-dark);
-    }
-
-    /* ========== ABOUT ========== */
-    #sobre-mi {
-      background: var(--cream-pale);
-      position: relative;
-      overflow: hidden;
-      z-index: 3;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-image-wrapper {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      aspect-ratio: 3/4;
-      background: var(--cream);
-    }
-
-    .about-image-wrapper::after {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border: 3px solid var(--wine);
-      border-radius: 12px;
-      pointer-events: none;
-      opacity: 0.2;
-    }
-
-    .about-text .section-title {
-      color: var(--black);
-    }
-
-    .about-text .section-title .accent {
-      color: var(--wine);
-    }
-
-    .about-description {
-      font-size: 1rem;
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--cream-dark);
-      margin-bottom: 2rem;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .skill-tag {
-      padding: 0.5rem 1.2rem;
-      border: 1.5px solid var(--wine);
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--wine);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .skill-tag:hover {
-      background: var(--wine);
-      color: var(--cream-light);
-    }
-
-    /* ========== MARQUEE ========== */
-    .marquee-section {
-      overflow: hidden;
-      padding: 2.5rem 0;
-      background: var(--wine);
-      position: relative;
-      z-index: 3;
-    }
-
-    .marquee-track {
-      display: flex;
-      animation: marquee 22s linear infinite;
-      width: max-content;
-    }
-
-    .marquee-track span {
-      font-size: clamp(1.8rem, 4vw, 3.2rem);
-      font-weight: 800;
-      white-space: nowrap;
-      padding: 0 1.5rem;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(212, 203, 196, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transition: color 0.3s, -webkit-text-stroke-color 0.3s;
-    }
-
-    .marquee-track span:hover {
-      color: var(--cream);
-      -webkit-text-stroke-color: var(--cream);
-    }
-
-    .marquee-track .dot {
-      color: var(--cream);
-      -webkit-text-stroke: none;
-      padding: 0 0.8rem;
-      font-size: clamp(1rem, 2vw, 1.5rem);
-      display: flex;
-      align-items: center;
-    }
-
-    @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    /* Languages marquee - reverse direction */
-    .marquee-reverse {
-      animation: marqueeReverse 25s linear infinite;
-    }
-
-    .marquee-reverse .lang-item {
-      color: var(--wine);
-      -webkit-text-stroke: 0;
-      font-size: clamp(1.2rem, 2.5vw, 2rem);
-      font-weight: 600;
-      letter-spacing: 0.03em;
-    }
-
-    @keyframes marqueeReverse {
-      0% {
-        transform: translateX(-50%);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    /* ========== CONTACT ========== */
-    #contacto {
-      text-align: center;
-      padding: 8rem 3rem;
-      background: var(--white);
-      position: relative;
-      z-index: 3;
-    }
-
-    .contact-big-text {
-      font-size: clamp(2.5rem, 7vw, 6rem);
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 2rem;
-      color: var(--black);
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-    }
-
-    .contact-big-text .accent {
-      color: var(--wine);
-    }
-
-    .contact-email {
-      display: inline-block;
-      font-size: clamp(0.9rem, 2vw, 1.3rem);
-      font-weight: 500;
-      color: var(--cream-dark);
-      border-bottom: 2px solid var(--wine);
-      padding-bottom: 4px;
-      margin-bottom: 3rem;
-      transition: color 0.3s;
-      letter-spacing: 0.02em;
-    }
-
-    .contact-email:hover {
-      color: var(--wine);
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .social-link {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      border: 1.5px solid var(--cream-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s, border-color 0.3s, transform 0.3s;
-    }
-
-    .social-link:hover {
-      background: var(--wine);
-      border-color: var(--wine);
-      transform: translateY(-4px);
-    }
-
-    .social-link svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--black);
-      transition: fill 0.3s;
-    }
-
-    .social-link:hover svg {
-      fill: var(--cream-light);
-    }
-
-    /* ========== FOOTER ========== */
-    footer {
-      padding: 2rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--cream-light);
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--cream-dark);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    footer .heart {
-      color: var(--wine);
-    }
-
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 1024px) {
-      .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .exp-timeline::before {
-        left: 30px;
-      }
-
-      .exp-item {
-        grid-template-columns: 60px 1fr;
-      }
-
-      .exp-company {
-        text-align: left;
-        padding-right: 0;
-        padding-left: 0;
-        margin-bottom: 0.5rem;
-      }
-
-      .exp-dot-col {
-        justify-content: center;
-        order: -1;
-      }
-
-      .exp-details {
-        padding-left: 0;
-        grid-column: 2;
-      }
-
-      .exp-company {
-        grid-column: 2;
-        grid-row: 1;
-      }
-
-      .exp-dot-col {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-      }
-
-      .exp-details {
-        grid-column: 2;
-        grid-row: 2;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 1rem 1.5rem;
-      }
-
-      .nav-links,
-      .lang-switcher {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .mobile-menu {
-        display: flex;
-      }
-
-      section {
-        padding: 5rem 1.5rem;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4px;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      .about-image-wrapper {
-        max-width: 350px;
-        margin: 0 auto;
-      }
-
-      .cursor-dot,
-      .cursor-ring {
-        display: none;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-      }
-
-      .stats-strip {
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .exp-timeline::before {
-        display: none;
-      }
-
-      .exp-item {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-      }
-
-      .exp-dot-col {
-        display: none;
-      }
-
-      .exp-company {
-        text-align: left;
-        padding: 0;
-        grid-column: 1;
-      }
-
-      .exp-details {
-        padding: 0;
-        grid-column: 1;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3px;
-      }
-    }
-
-    /* ========== LANGUAGE SWITCHER ========== */
-    .lang-switcher {
-      display: flex;
-      gap: 0.4rem;
-      margin-left: 2rem;
-    }
-
-    .lang-btn {
-      background: none;
-      border: 1.5px solid rgba(255,255,255,0.3);
-      color: #fff;
-      font-family: var(--font-main);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      transition: background 0.3s, border-color 0.3s;
-      text-transform: uppercase;
-    }
-
-    .lang-btn:hover,
-    .lang-btn.active {
-      background: rgba(255,255,255,0.2);
-      border-color: rgba(255,255,255,0.7);
-    }
-
-    /* ========== LANGUAGES SECTION ========== */
-    .languages-section {
-      padding: 5rem 3rem;
-      background: var(--cream-pale);
-      position: relative;
-      z-index: 3;
-    }
-
-    .languages-header {
-      max-width: 1200px;
-      margin: 0 auto 3rem;
-    }
-
-    .languages-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .lang-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.5s var(--ease-out-expo),
-        box-shadow 0.5s var(--ease-out-expo);
-    }
-
-    .lang-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(72, 24, 47, 0.1);
-    }
-
-    .lang-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--wine);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.6s var(--ease-out-expo);
-    }
-
-    .lang-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .lang-flag {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .lang-name {
-      font-size: 1.3rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      color: var(--black);
-      margin-bottom: 0.3rem;
-    }
-
-    .lang-level {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--wine);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-
-    .lang-bar-track {
-      width: 100%;
-      height: 6px;
-      background: var(--cream-light);
-      border-radius: 3px;
-      overflow: hidden;
-      margin-bottom: 0.5rem;
-    }
-
-    .lang-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--wine), var(--wine-light));
-      border-radius: 3px;
-      width: 0;
-      transition: width 1.2s var(--ease-out-expo);
-    }
-
-    .lang-bar-fill.animated {
-      /* width set via data attribute */
-    }
-
-    .lang-cert {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--cream-dark);
-      letter-spacing: 0.05em;
-      margin-top: 0.8rem;
-    }
-
-    @media (max-width: 768px) {
-      .languages-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 500px;
-      }
-      .lang-switcher {
-        margin-left: 1rem;
-        gap: 0.25rem;
-      }
-      .lang-btn {
-        font-size: 0.6rem;
-        padding: 0.25rem 0.45rem;
-      }
-    }
-    /* ========== DATA ANALYSIS SECTION ========== */
-    .data-section {
-      padding: 7rem 3rem;
-      background: var(--wine-dark);
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-      z-index: 3;
-    }
-
-    .data-section::before {
-      content: '';
-      position: absolute;
-      top: -20%; right: -10%;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(212,203,196,0.04) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .data-header {
-      max-width: 1100px;
-      margin: 0 auto 4rem;
-      text-align: center;
-    }
-
-    .data-header .section-label {
-      color: var(--cream);
-    }
-
-    .data-header .section-title {
-      color: #fff;
-    }
-
-    .data-intro {
-      font-size: 1rem;
-      font-weight: 300;
-      line-height: 1.8;
-      color: rgba(212,203,196,0.65);
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .data-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .data-card {
-      background: rgba(212, 203, 196, 0.04);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 203, 196, 0.08);
-      border-radius: 16px;
-      padding: 2rem 2rem 1.8rem;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.5s var(--ease-out-expo),
-        box-shadow 0.5s var(--ease-out-expo),
-        border-color 0.4s;
-    }
-
-    .data-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-      border-color: rgba(212, 203, 196, 0.18);
-    }
-
-    .data-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,203,196,0.15) 30%, rgba(212,203,196,0.08) 70%, transparent);
-    }
-
-    .data-card-icon {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--cream);
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .data-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--cream-light);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      margin-bottom: 0.8rem;
-      line-height: 1.3;
-    }
-
-    .data-card p {
-      font-size: 0.85rem;
-      font-weight: 300;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.55);
-    }
-
-    .data-card-tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 1.2rem;
-    }
-
-    .data-tool {
-      padding: 0.3rem 0.8rem;
-      border: 1px solid rgba(212,203,196,0.15);
-      border-radius: 50px;
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: rgba(212,203,196,0.6);
-      letter-spacing: 0.04em;
-      transition: background 0.3s, color 0.3s, border-color 0.3s;
-    }
-
-    .data-tool:hover {
-      background: var(--cream);
-      border-color: var(--cream);
-      color: var(--wine-dark);
-    }
-
-    /* Full-width last card */
-    .data-card-full {
-      grid-column: 1 / -1;
-      text-align: center;
-      background: rgba(212, 203, 196, 0.06);
-    }
-
-    .data-card-full p {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-      .data-section { padding: 5rem 1.5rem; }
-      .data-grid { grid-template-columns: 1fr; }
-      .data-card-full { grid-column: 1; }
-    }
-    /* ========== AURORA HERO ========== */
-    .hero {
-      background: var(--wine-dark) !important;
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: -50%;
-      background:
-        radial-gradient(ellipse 80% 80% at 20% 50%, rgba(72, 24, 47, 0.5), transparent),
-        radial-gradient(ellipse 80% 80% at 80% 50%, rgba(107, 45, 74, 0.4), transparent),
-        radial-gradient(ellipse 60% 60% at 50% 0%, rgba(212, 203, 196, 0.12), transparent);
-      animation: aurora 10s ease-in-out infinite alternate;
-      filter: blur(50px);
-      z-index: 0;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: -50%;
-      background:
-        radial-gradient(ellipse 60% 80% at 60% 40%, rgba(212, 203, 196, 0.08), transparent),
-        radial-gradient(ellipse 80% 60% at 30% 70%, rgba(72, 24, 47, 0.25), transparent);
-      animation: aurora 14s ease-in-out infinite alternate-reverse;
-      filter: blur(60px);
-      z-index: 0;
-    }
-
-    @keyframes aurora {
-      0% { transform: translate(-5%, -5%) rotate(0deg); }
-      50% { transform: translate(5%, 5%) rotate(180deg); }
-      100% { transform: translate(-3%, 3%) rotate(360deg); }
-    }
-
-    .aurora-noise {
-      position: absolute;
-      inset: 0;
-      opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    #particleCanvas {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .hero .hero-subtitle,
-    .hero .hero-name,
-    .hero .hero-tagline,
-    .hero .hero-scroll-indicator span {
-      position: relative;
-      z-index: 3;
-    }
-
-    .hero .hero-name {
-      color: var(--cream-light);
-    }
-
-    .hero .hero-name .accent {
-      color: var(--cream);
-    }
-
-    .hero .hero-subtitle {
-      color: var(--cream);
-    }
-
-    .hero .hero-tagline {
-      color: rgba(212, 203, 196, 0.6);
-    }
-
-    .hero .scroll-line {
-      background: linear-gradient(to bottom, var(--cream), transparent);
-    }
-
-    .hero .hero-scroll-indicator {
-      z-index: 3;
-    }
-
-    /* ========== GLASS PREMIUM ========== */
-    .glass-premium {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow:
-        0 0 0 0.5px rgba(255,255,255,0.05) inset,
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        0 2px 8px rgba(0, 0, 0, 0.15);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .glass-premium::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      opacity: 0.4;
-    }
-
-    .glass-premium::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.08) 70%, transparent);
-    }
-
-    /* Glass on stat items */
-    .stats-strip {
-      background: var(--wine-dark) !important;
-      position: relative;
-    }
-
-    .stat-item {
-      background: rgba(212, 203, 196, 0.05);
-      backdrop-filter: blur(16px) saturate(160%);
-      -webkit-backdrop-filter: blur(16px) saturate(160%);
-      border: 1px solid rgba(212, 203, 196, 0.1);
-      border-radius: 16px;
-      padding: 2rem 2.5rem;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s;
-    }
-
-    .stat-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    }
-
-    .stat-item::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,203,196,0.2) 30%, rgba(212,203,196,0.1) 70%, transparent);
-    }
-
-    .stat-number {
-      color: var(--cream) !important;
-    }
-
-    .stat-label {
-      color: rgba(212, 203, 196, 0.5) !important;
-    }
-
-    /* Glass on language cards */
-    .lang-card {
-      background: rgba(72, 24, 47, 0.04) !important;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(72, 24, 47, 0.08);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .lang-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(72,24,47,0.15) 30%, rgba(72,24,47,0.08) 70%, transparent);
-    }
-
-    /* ========== HORIZONTAL SCROLL GALLERY ========== */
-    #proyectos {
-      overflow: hidden;
-      padding-bottom: 4rem;
-    }
-
-    .h-scroll-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .h-scroll-wrapper::-webkit-scrollbar {
-      display: none;
-    }
-
-    .h-scroll-track {
-      display: flex;
-      gap: 1rem;
-      transition: transform 0.1s linear;
-      will-change: transform;
-      padding: 1rem 0;
-    }
-
-    .h-scroll-track .project-card {
-      min-width: 300px;
-      max-width: 300px;
-      aspect-ratio: 1/1;
-      border-radius: 12px;
-      flex-shrink: 0;
-    }
-
-    .h-scroll-hint {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-      margin-top: 2rem;
-      color: var(--cream-dark);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .h-scroll-hint svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--wine);
-      fill: none;
-      stroke-width: 2;
-      animation: scrollHintBounce 2s ease-in-out infinite;
-    }
-
-    @keyframes scrollHintBounce {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(8px); }
-    }
-
-    @media (max-width: 768px) {
-      .h-scroll-track .project-card {
-        min-width: 250px;
-        max-width: 250px;
-      }
-    }
-  </style>
+/* 01 · PALETA Y BASE */
+:root {
+  --cream: #D4CBC4; --cream-light: #E8E2DD; --cream-pale: #F3EFEC;
+  --cream-dark: #B8AFA8; --wine: #48182F; --wine-light: #6B2D4A;
+  --wine-dark: #350F22; --white: #FAFAF8; --black: #1A1A1A;
+  --font-main: 'League Spartan', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body { margin: 0; font-family: var(--font-main); background: var(--white); color: var(--black); font-size: 1.1rem; line-height: 1.55; }
+h1, h2, h3, p { margin: 0 0 1.15rem; }
+h1, h2, h3 { line-height: 1.04; }
+h2 { font-size: clamp(2.4rem, 5.5vw, 4.8rem); font-weight: 800; letter-spacing: -.04em; margin-bottom: 2.5rem; }
+h3 { font-size: 1.5rem; font-weight: 600; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+a, button { -webkit-tap-highlight-color: transparent; }
+button, .button { min-height: 44px; }
+:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+::selection { background: var(--wine-light); color: var(--white); }
+img { display: block; width: 100%; height: auto; }
+.container { width: min(1120px, calc(100% - 2.5rem)); margin-inline: auto; }
+.section { padding-block: clamp(4rem, 8vw, 8rem); }
+.eyebrow { text-transform: uppercase; font-size: .85rem; letter-spacing: .19em; font-weight: 600; margin-bottom: 1.5rem; }
+.accent { color: var(--wine); }
+.skip-link { position: fixed; top: 1rem; left: 1rem; padding: .8rem 1rem; background: var(--cream-light); color: var(--wine); z-index: 100; transform: translateY(-180%); }
+.skip-link:focus { transform: none; }
+/* 02 · CABECERA, IDIOMAS Y MENÚ MÓVIL (SIN JS, TODOS LOS ENLACES VISIBLES) */
+header { background: var(--wine-dark); color: var(--cream-light); position: sticky; top: 0; z-index: 20; border-bottom: 1px solid #ffffff24; }
+nav { max-width: 1440px; margin: auto; padding: .65rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: .5rem; flex-wrap: wrap; }
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: .06em; display: flex; align-items: center; min-height: 44px; }
+.logo span { color: var(--cream-dark); }
+.nav-actions, .languages { display: flex; align-items: center; gap: .2rem; }
+.languages button { background: none; border: 1px solid transparent; color: inherit; padding: .3rem .55rem; min-width: 44px; font-size: .85rem; }
+.languages button[aria-pressed="true"] { border-color: var(--cream); background: #ffffff0b; }
+.nav-links { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: .25rem 1rem; padding: 0; margin: 0; width: 100%; }
+.nav-links a { display: flex; align-items: center; min-height: 44px; font-size: .95rem; }
+.nav-links a:hover { text-decoration: underline; text-underline-offset: .35em; }
+.menu-toggle { display: none; width: 44px; background: none; border: 0; color: inherit; padding: 10px; }
+.menu-toggle span { display: block; height: 2px; background: currentColor; margin: 5px 0; }
+.js .menu-toggle { display: block; }
+.js .nav-links { display: none; }
+.js .nav-links.open { display: flex; flex-direction: column; padding: 1rem 0; }
+/* 03 · PORTADA Y PARTÍCULAS */
+.hero { position: relative; isolation: isolate; background: var(--wine-dark); color: var(--cream-light); min-height: min(900px, 92vh); min-height: min(900px, 92svh); padding: 5rem 1.25rem 6rem; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 75% 60%, #6b2d4a85, transparent 65%), radial-gradient(ellipse at 15% 10%, #d4cbc41a, transparent 60%); }
+#particles { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+.hero-content { width: 100%; max-width: 1000px; }
+h1 { font-size: clamp(3.65rem, 11.5vw, 10.3rem); font-weight: 900; letter-spacing: -.055em; line-height: .88; margin-bottom: 2rem; }
+h1 .accent { display: block; color: var(--cream); }
+.hero-subtitle { font-size: clamp(.9rem, 2.1vw, 1.25rem); font-weight: 500; letter-spacing: .06em; }
+.hero-phrase { color: #ffffffd9; max-width: 600px; margin: 1.5rem auto 2rem; }
+.buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; padding: .85rem 1.4rem; background: var(--cream-light); color: var(--wine-dark); border: 1px solid var(--cream-light); font-size: 1rem; font-weight: 600; transition: transform .2s, background .2s; }
+.button.secondary { background: transparent; color: inherit; border-color: currentColor; }
+.button:hover { transform: translateY(-3px); }
+.scroll-indicator { position: absolute; bottom: 1.25rem; left: 50%; transform: translateX(-50%); min-height: 44px; font-size: .8rem; letter-spacing: .17em; text-transform: uppercase; }
+.scroll-indicator::after { content: ''; display: block; height: 22px; width: 1px; margin: .4rem auto 0; background: var(--cream); }
+/* 04 · CINTA CONTINUA */
+.marquee { overflow: hidden; background: var(--cream); color: var(--wine); padding-block: 1.2rem; }
+.marquee-track { display: flex; width: max-content; animation: marquee 45s linear infinite; }
+.marquee-track span { flex-shrink: 0; white-space: nowrap; font-size: 1.1rem; font-weight: 600; letter-spacing: .08em; padding-right: .5em; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+/* 05 · SOBRE MÍ Y PILARES */
+.about { background: var(--cream-pale); }
+.about-grid { display: grid; gap: 3rem; }
+.portrait { max-width: 440px; align-self: start; }
+.portrait picture { display: block; position: relative; }
+.portrait img { aspect-ratio: 720/986; object-fit: cover; border-radius: 2px 2px 80px 2px; }
+.about-copy p { color: #443b40; }
+.about-copy .eyebrow { color: var(--wine); }
+strong { font-weight: 600; color: var(--wine); }
+.pillars { display: grid; gap: 1.5rem; margin-top: 3rem; border-top: 1px solid var(--cream-dark); padding-top: 2rem; }
+.pillars h3 { color: var(--wine); font-size: 1.8rem; }
+.pillars p { margin-bottom: 0; }
+/* 06 · EXPERIENCIA: TARJETAS OSCURAS Y MÉTRICAS */
+.experience { background: var(--wine-dark); color: var(--cream-light); }
+.experience h2 { max-width: 950px; }
+.experience h2 em { color: var(--cream); font-style: italic; }
+.experience-card { scroll-margin-top: 6rem; background: var(--wine); border: 1px solid #ffffff30; border-radius: 4px; margin-top: 2rem; padding: clamp(1.5rem, 4vw, 3rem); color: #ffffffe0; font-weight: 400; font-size: 1.05rem; }
+.card-top { display: flex; justify-content: space-between; gap: .5rem 2rem; flex-wrap: wrap; }
+.company { color: var(--cream-light); font-size: 1.25rem; font-weight: 600; }
+.date { font-size: .95rem; }
+.experience-card h3 { font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--white); }
+.duties { padding-left: 1.2rem; margin: 1.5rem 0; }
+.duties li { padding-left: .3rem; margin: .5rem 0; }
+.duties li::marker { color: var(--cream); }
+.card-tools { border-top: 1px solid #ffffff38; padding-top: 1.1rem; margin-bottom: 0; font-size: 1rem; }
+.highlight { border-left: 2px solid var(--cream); padding-left: 1.2rem; margin-block: 2rem; }
+.metric { font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--cream-light); }
+.metric-wide { font-size: clamp(2rem, 6.5vw, 5rem); }
+.small-note { font-size: .95rem; margin-top: 1.5rem; margin-bottom: 0; }
+/* 07 · FORMACIÓN Y CHIPS DE HERRAMIENTAS */
+.education { background: var(--cream-light); }
+.education-grid { display: grid; gap: 2rem; }
+.education-grid article { padding-block: 1.5rem; border-top: 1px solid var(--cream-dark); }
+.education h3 { color: var(--wine); }
+.tool-groups { display: grid; gap: 2rem; margin-top: 2.5rem; }
+.tool-groups h3 { font-size: 1.2rem; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; }
+.data-tool { border: 1px solid var(--wine-light); color: var(--wine); padding: .45rem .75rem; border-radius: 2px; font-size: .95rem; }
+.tools-note { max-width: 850px; margin: 2rem 0 0; font-size: 1rem; }
+/* 08 · IDIOMAS Y ESCALA MCER */
+.language-section { background: var(--wine); color: var(--cream-light); }
+.language-grid { display: grid; gap: 1rem; }
+.language-card { border: 1px solid #ffffff45; padding: 1.5rem; background: var(--wine-dark); }
+.language-code { font-size: 2.8rem; font-weight: 800; letter-spacing: -.04em; color: var(--cream); display: block; margin-bottom: 1rem; }
+.language-card p { font-size: 1rem; color: #ffffffe0; }
+.scale { display: grid; grid-template-columns: repeat(6, 1fr); gap: .25rem; padding: 0; margin-top: 2rem; list-style: none; }
+.scale li { border-top: 4px solid #ffffff40; padding-top: .5rem; font-size: .75rem; text-align: center; }
+.scale .filled { border-color: var(--cream-light); }
+/* 09 · CONTACTO Y PIE */
+.contact { text-align: center; }
+.contact h2 { text-transform: uppercase; font-size: clamp(2.45rem, 7.5vw, 6.7rem); letter-spacing: -.045em; }
+.contact h2 span { display: block; }
+.contact-email { display: inline-block; max-width: 100%; overflow-wrap: anywhere; color: var(--wine); border-bottom: 1px solid var(--wine); margin-bottom: 2.5rem; padding-block: .65rem; }
+.linkedin { background: var(--wine); color: var(--cream-light); border-color: var(--wine); }
+.hero .button:focus-visible { outline-color: var(--cream-light); }
+.linkedin:focus-visible { outline-color: var(--wine-light); }
+.linkedin svg { width: 22px; height: 22px; fill: currentColor; }
+footer { border-top: 1px solid var(--cream); padding: 1.5rem 1.25rem; font-size: .9rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; }
+footer p { margin: 0; }
+/* 10 · AMPLIACIÓN PROGRESIVA PARA TABLET Y ESCRITORIO */
+@media (min-width: 640px) {
+  .container { width: min(1120px, calc(100% - 5rem)); }
+  .pillars, .tool-groups { grid-template-columns: repeat(3, 1fr); }
+  .education-grid, .language-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  nav { flex-wrap: nowrap; padding-inline: 2.5rem; }
+  .nav-actions { order: 2; }
+  .js .menu-toggle { display: none; }
+  .nav-links, .js .nav-links, .js .nav-links.open { display: flex; flex-direction: row; width: auto; gap: 1.5rem; padding: 0; }
+  .about-grid { grid-template-columns: .8fr 1.2fr; gap: 5rem; }
+  .portrait { position: sticky; top: 7rem; }
+  .language-grid { grid-template-columns: repeat(4, 1fr); }
+}
+/* 11 · APARICIONES, PRECARGA Y CURSOR: MEJORAS OPCIONALES */
+.preloader, .cursor, #trail { display: none; }
+.js .preloader { display: flex; align-items: center; justify-content: center; position: fixed; inset: 0; background: var(--wine-dark); color: var(--cream-light); z-index: 50; pointer-events: none; animation: preloader-out 1.15s forwards; }
+.preloader span { font-size: clamp(1.3rem, 4vw, 3rem); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; animation: name-in .6s both; }
+@keyframes name-in { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: none; } }
+@keyframes preloader-out { 0%, 60% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+/* La clase solo se activa DESPUÉS de crear el observador. */
+.js .reveal.pending { opacity: 0; transform: translateY(22px); }
+.reveal { transition: opacity .7s, transform .7s; }
+@media (hover: hover) and (pointer: fine) {
+  .js.cursor-enabled, .js.cursor-enabled a, .js.cursor-enabled button { cursor: none; }
+  .cursor-enabled .cursor { display: block; position: fixed; top: 0; left: 0; width: 9px; height: 9px; border: 1px solid var(--cream-light); background: var(--wine); border-radius: 50%; pointer-events: none; z-index: 80; opacity: 0; }
+  .cursor-enabled #trail { display: block; position: fixed; inset: 0; pointer-events: none; z-index: 79; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .preloader, #particles, .cursor, #trail { display: none !important; }
+  .js.cursor-enabled, .js.cursor-enabled a, .js.cursor-enabled button { cursor: auto; }
+  .js .reveal.pending { opacity: 1; transform: none; }
+}
+</style>
 </head>
-
 <body>
-
-  <!-- CUSTOM CURSOR -->
-  <canvas class="cursor-trail-canvas" id="cursorTrailCanvas"></canvas>
-  <div class="cursor-dot"></div>
-
-  <!-- PRELOADER -->
-  <div class="preloader" id="preloader">
-    <div class="preloader-text" id="preloaderText"></div>
-  </div>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">ASC</a>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#experiencia" data-i18n="nav_experience">Experiencia</a></li>
-        <li><a href="#sobre-mi" data-i18n="nav_about">¿Por qué moda?</a></li>
-        <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
-      </ul>
-      <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="fr">FR</button>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#experiencia" class="mobile-nav-link" data-i18n-mobile="nav_experience">Experiencia</a>
-    <a href="#sobre-mi" class="mobile-nav-link" data-i18n-mobile="nav_about">¿Por qué moda?</a>
-    <a href="#contacto" class="mobile-nav-link" data-i18n-mobile="nav_contact">Contacto</a>
-    <div class="mobile-lang-switcher">
-      <button class="lang-btn active" data-lang="es">ES</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="fr">FR</button>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <canvas id="particleCanvas"></canvas>
-    <div class="aurora-noise"></div>
-    <h1 class="hero-name reveal">Andrea<br><span class="accent">Saldarriaga</span></h1>
-    <p class="hero-subtitle reveal" data-i18n="hero_subtitle">Marketing & Product Mindset</p>
-    <p class="hero-tagline reveal" data-i18n="hero_tagline">Analizo datos, entiendo al cliente y los transformo en decisiones de producto.</p>
-    <div class="hero-scroll-indicator">
-      <span data-i18n="scroll">Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-
-
-
-  <div class="color-strip"></div>
-
-
-  <!-- MARQUEE -->
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <span>Análisis Comercial</span><span class="dot">✦</span>
-      <span>Análisis de Datos</span><span class="dot">✦</span>
-      <span>Business Intelligence</span><span class="dot">✦</span>
-      <span>Reporting</span><span class="dot">✦</span>
-      <span>Estrategia</span><span class="dot">✦</span>
-      <span>Excel</span><span class="dot">✦</span>
-      <span>Creatividad</span><span class="dot">✦</span>
-      <span>Análisis Comercial</span><span class="dot">✦</span>
-      <span>Análisis de Datos</span><span class="dot">✦</span>
-      <span>Business Intelligence</span><span class="dot">✦</span>
-      <span>Reporting</span><span class="dot">✦</span>
-      <span>Estrategia</span><span class="dot">✦</span>
-      <span>Excel</span><span class="dot">✦</span>
-      <span>Creatividad</span><span class="dot">✦</span>
-    </div>
-  </div>
-
-
-  <!-- LANGUAGES -->
-  <section class="languages-section">
-    <div class="languages-header">
-      <p class="section-label reveal" data-i18n="lang_label">Idiomas</p>
-      <h2 class="section-title reveal" data-i18n="lang_title">Comunicación sin fronteras</h2>
-    </div>
-    <div class="languages-grid">
-      <div class="lang-card reveal">
-        <span class="lang-flag">🇪🇸</span>
-        <h3 class="lang-name" data-i18n="lang_es_name">Español</h3>
-        <p class="lang-level" data-i18n="lang_es_level">Nativo</p>
-        <div class="lang-bar-track"><div class="lang-bar-fill" data-width="100"></div></div>
-        <p class="lang-cert" data-i18n="lang_es_cert">Lengua materna</p>
-      </div>
-      <div class="lang-card reveal">
-        <span class="lang-flag">🇬🇧</span>
-        <h3 class="lang-name" data-i18n="lang_en_name">Inglés</h3>
-        <p class="lang-level" data-i18n="lang_en_level">Avanzado · C1</p>
-        <div class="lang-bar-track"><div class="lang-bar-fill" data-width="90"></div></div>
-        <p class="lang-cert" data-i18n="lang_en_cert">Certificación IELTS</p>
-      </div>
-      <div class="lang-card reveal">
-        <span class="lang-flag">🇫🇷</span>
-        <h3 class="lang-name" data-i18n="lang_fr_name">Francés</h3>
-        <p class="lang-level" data-i18n="lang_fr_level">Intermedio · B2</p>
-        <div class="lang-bar-track"><div class="lang-bar-fill" data-width="65"></div></div>
-        <p class="lang-cert" data-i18n="lang_fr_cert">Nivel B2</p>
-      </div>
-      <div class="lang-card reveal">
-        <span class="lang-flag">🇵🇹</span>
-        <h3 class="lang-name" data-i18n="lang_pt_name">Portugués</h3>
-        <p class="lang-level" data-i18n="lang_pt_level">Básico · A2</p>
-        <div class="lang-bar-track"><div class="lang-bar-fill" data-width="30"></div></div>
-        <p class="lang-cert" data-i18n="lang_pt_cert">Nivel A2</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ABOUT / ¿POR QUÉ MODA? -->
-  <section id="sobre-mi">
-    <div class="about-grid">
-      <div class="about-image-wrapper reveal-left">
-        <img src="img/Foto.jpg" alt="Andrea Saldarriaga Cadavid">
-      </div>
-      <div class="about-text reveal-right">
-        <p class="section-label" data-i18n="about_label">¿Por qué moda?</p>
-        <h2 class="section-title"><span data-i18n="about_hello">Hola, soy</span> <span class="accent">Andrea</span></h2>
-        <p class="about-description" style="color: var(--black); font-weight: 600;">
-          <strong style="font-weight: 700; font-size: 1.05rem;">Soy estudiante de Marketing y Dirección Comercial.</strong><br>
-          Mi interés por la moda empezó de forma natural: siempre me llamó más entender cómo se construye un look que simplemente llevarlo. Con el tiempo, esa curiosidad evolucionó en algo más profundo: entender por qué las personas eligen lo que eligen.
-        </p>
-        <p class="about-description" style="color: var(--black); font-weight: 600;">
-          Hoy veo la moda como la intersección entre <strong style="font-weight: 700;">producto, datos y cliente.</strong> Me interesa especialmente cómo las marcas transforman tendencias en producto y cómo conectan con la demanda real del mercado.
-        </p>
-        <p class="about-description" style="color: var(--black); font-weight: 600;">
-          A lo largo de mi carrera, he enfocado mis proyectos en moda, trabajando <strong style="font-weight: 700;">análisis de mercado, comportamiento del consumidor y estrategia comercial.</strong>
-        </p>
-        <p class="about-description" style="color: var(--black); font-weight: 600;">
-          Me defino por una curiosidad constante que me lleva a ir más allá del resultado y entender qué hay detrás de cada decisión. Disfruto estructurando problemas y transformándolos en insights que puedan convertirse en acciones.
-        </p>
-        <p class="about-description" style="color: var(--black); font-weight: 600;">
-          También me siento cómoda en entornos dinámicos donde es necesario priorizar y tomar decisiones con información incompleta, siempre con foco en el cliente y en el impacto en el negocio.
-        </p>
-        <p class="about-description" style="color: var(--black); font-weight: 600;">
-          Porque, al final, más allá de las diferencias entre empresas, hay algo en común: <strong style="font-weight: 700;">todo empieza y termina en el consumidor.</strong>
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <div class="color-strip"></div>
-
-
-  <!-- EXPERIENCE / MI ENFOQUE PROFESIONAL -->
-  <section class="data-section" id="experiencia">
-    <div class="data-header">
-      <p class="section-label reveal">Mi enfoque profesional</p>
-      <h2 class="section-title reveal">Análisis comercial y optimización de <span style="color:var(--cream)">producto (online & offline)</span></h2>
-    </div>
-
-    <!-- EXPERIENCE 1: Almacenes HJ -->
-    <div class="data-grid">
-      <div class="data-card reveal">
-        <div class="data-card-icon">Almacenes HJ — Análisis comercial y optimización de producto</div>
-        <ul style="list-style:disc; padding-left:1.2rem; font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6);">
-          <li>Analicé el rendimiento de producto por canal (online y offline), identificando una desalineación entre el comportamiento de compra y la presencia en e-commerce.</li>
-          <li>Detecté que el <strong style="color:var(--cream-light)">80% de los productos más vendidos en tienda física no estaban siendo explotados en el canal online</strong>, identificando una oportunidad clara de activación digital.</li>
-          <li>Identifiqué oportunidades de activación de producto en el canal digital en función de su comportamiento de compra, especialmente en productos de alta rotación y bajo precio.</li>
-          <li>Propuse estrategias de visibilidad orientadas a generar tráfico a tienda a través de campañas digitales, alineando el canal online con el comportamiento real del cliente.</li>
-          <li>Realicé seguimiento de rotación y demanda por producto, contribuyendo a priorizar decisiones comerciales y optimizar el mix de producto.</li>
-          <li>Participé en el análisis del catálogo digital, apoyando la priorización de producto, su exposición en el canal online y su activación en campañas.</li>
-          <li>Detecté una fragmentación en la gestión de datos entre ERP, e-commerce y analítica digital, desarrollando una propuesta de integración para mejorar la calidad del dato y la toma de decisiones en un entorno omnicanal.</li>
-          <li>Desarrollé dashboards e informes de ventas para facilitar la toma de decisiones en marketing, compras y ventas.</li>
-        </ul>
-        <div class="data-card-tools">
-          <span class="data-tool">Shopify</span>
-          <span class="data-tool">Excel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- EXPERIENCE 2: Maeva -->
-    <div class="data-grid" style="margin-top: 2rem;">
-      <div class="data-card reveal">
-        <div class="data-card-icon">Maeva | Acompañamiento en emprendimiento de moda</div>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:1rem;">Acompañé el desarrollo de un emprendimiento de moda, lo que me permitió entender de cerca el proceso completo de creación de producto desde una perspectiva práctica.</p>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:1rem;">Tuve la oportunidad de acompañar de cerca a la fundadora en distintas fases del proceso, desde la moldería y confección hasta el etiquetado final, lo que me permitió entender cómo se estructura la producción y cómo se optimizan costes a través de talleres especializados por etapas.</p>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:1rem;">Uno de los principales aprendizajes fue entender que el producto no comienza en el diseño, sino en el cliente.</p>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:0.5rem;">Durante el proceso, participé en decisiones relacionadas con:</p>
-        <ul style="list-style:disc; padding-left:1.2rem; font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:1rem;">
-          <li>Definición de tallas en función del buyer persona</li>
-          <li>Estimación de demanda para calcular unidades</li>
-          <li>Uso de encuestas para validar producto</li>
-        </ul>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:0.5rem;">También entendí la lógica estratégica detrás de una colección:</p>
-        <ul style="list-style:disc; padding-left:1.2rem; font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:1rem;">
-          <li>Basics → mayor volumen y rotación</li>
-          <li>Alteraciones → variaciones con menor riesgo</li>
-          <li>Moda → productos test para medir aceptación</li>
-        </ul>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6);">Esta experiencia me permitió desarrollar criterio sobre cómo equilibrar creatividad, demanda y viabilidad comercial en la construcción de producto.</p>
-      </div>
-    </div>
-
-    <!-- SAMPLE WORK PHOTO -->
-    <div style="margin-top: 2.5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-      <div class="reveal" style="border-radius: 16px; overflow: hidden;">
-        <img src="img/sample-work.jpg" alt="Sample Work — Behind the scenes" style="width:100%; height:auto; display:block; border-radius:16px;">
-      </div>
-    </div>
-
-    <!-- INSIGHTS, TOOLS & LEARNING -->
-    <div class="data-grid" style="margin-top: 3rem;">
-      <div class="data-card reveal">
-        <div class="data-card-icon" style="font-size:1rem; margin-bottom:1.2rem;">Insights, Tools & Learning</div>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:1rem;">Sigo activamente el sector a través de trend forecasting platforms y herramientas de análisis de mercado como <strong style="color:var(--cream-light)">WGSN, Heuritech y Edited</strong>, así como informes como Pinterest Predicts y TikTok What's Next Report, lo que me permite conectar tendencias con datos reales de mercado.</p>
-        <p style="font-size:0.85rem; font-weight:300; line-height:1.85; color:rgba(255,255,255,0.6); margin-bottom:1.2rem;">Además, he complementado esta visión con formación en moda y análisis de datos, a través de cursos como <em>Management of Fashion and Luxury Companies</em> (Università Bocconi) y <em>Introduction to Data Analytics</em> (IBM), reforzando mi capacidad para entender el producto desde una perspectiva tanto creativa como analítica.</p>
-        <div class="data-card-tools" style="margin-top:0.5rem;">
-          <span class="data-tool">Excel</span>
-          <span class="data-tool">SAP</span>
-          <span class="data-tool">Looker Studio</span>
-          <span class="data-tool">Shopify</span>
-          <span class="data-tool">Google Analytics</span>
-          <span class="data-tool">SPSS</span>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-  <section id="contacto">
-    <p class="section-label reveal" data-i18n="contact_label">¿Conectamos?</p>
-    <h2 class="contact-big-text reveal"><span data-i18n="contact_title_1">Hagamos algo</span><br><span class="accent" data-i18n="contact_title_2">increíble</span> <span data-i18n="contact_title_3">juntos</span></h2>
-    <a href="mailto:asadarriaga@alu.ucam.edu" class="contact-email reveal">asadarriaga@alu.ucam.edu</a>
-    <div class="social-links reveal">
-      <a href="https://www.linkedin.com/in/andrea-saldarriagac/?locale=es_ES" class="social-link" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24">
-          <path
-            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-        </svg>
-      </a>
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <span>© 2026 Andrea Saldarriaga Cadavid</span>
-    <span><span data-i18n="footer_made">Hecho con</span> <span class="heart">♥</span> <span data-i18n="footer_coffee">y mucho café</span></span>
-  </footer>
-
-
-
-  <!-- ========== JAVASCRIPT ========== -->
-  <script>
-    // ---- PRELOADER ----
-    const preloaderName = "ANDREA SALDARRIAGA";
-    const preloaderEl = document.getElementById('preloaderText');
-    preloaderName.split('').forEach((char, i) => {
-      const span = document.createElement('span');
-      span.textContent = char === ' ' ? '\u00A0' : char;
-      span.style.animationDelay = `${i * 0.04}s`;
-      preloaderEl.appendChild(span);
-    });
-
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('preloader').classList.add('hidden');
-      }, 1400);
-    });
-
-    // ---- CUSTOM CURSOR — TRAIL LINE ----
-    const dot = document.querySelector('.cursor-dot');
-    const trailCanvas = document.getElementById('cursorTrailCanvas');
-    const tCtx = trailCanvas.getContext('2d');
-    let mouseX = 0, mouseY = 0;
-    const trail = [];
-    const trailLength = 80;
-
-    // Color detection — wine on light sections, cream on dark sections
-    const darkSections = ['.hero', '.data-section', '.marquee-section'];
-    let trailColor = { r: 72, g: 24, b: 47 }; // wine default
-
-    function getTrailColor() {
-      const el = document.elementFromPoint(mouseX, mouseY);
-      if (!el) return;
-      const isDark = darkSections.some(sel => el.closest(sel));
-      if (isDark) {
-        trailColor = { r: 212, g: 203, b: 196 }; // cream
-      } else {
-        trailColor = { r: 72, g: 24, b: 47 }; // wine
-      }
-    }
-
-    function resizeTrailCanvas() {
-      trailCanvas.width = window.innerWidth;
-      trailCanvas.height = window.innerHeight;
-    }
-    resizeTrailCanvas();
-    window.addEventListener('resize', resizeTrailCanvas);
-
-    document.addEventListener('mousemove', e => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.left = mouseX + 'px';
-      dot.style.top = mouseY + 'px';
-      getTrailColor();
-      trail.push({ x: mouseX, y: mouseY, time: Date.now(), r: trailColor.r, g: trailColor.g, b: trailColor.b });
-      if (trail.length > trailLength) trail.shift();
-    });
-
-    function drawTrail() {
-      tCtx.clearRect(0, 0, trailCanvas.width, trailCanvas.height);
-      if (trail.length < 2) { requestAnimationFrame(drawTrail); return; }
-
-      const now = Date.now();
-      const lifetime = 1400;
-      while (trail.length > 0 && now - trail[0].time > lifetime) trail.shift();
-      if (trail.length < 2) { requestAnimationFrame(drawTrail); return; }
-
-      tCtx.lineCap = 'round';
-      tCtx.lineJoin = 'round';
-
-      for (let i = 1; i < trail.length; i++) {
-        const progress = i / trail.length;
-        const age = (now - trail[i].time) / lifetime;
-        const alpha = Math.max(0, (1 - age) * progress * 0.6);
-        const width = progress * 8;
-
-        tCtx.beginPath();
-        tCtx.moveTo(trail[i - 1].x, trail[i - 1].y);
-        tCtx.lineTo(trail[i].x, trail[i].y);
-        tCtx.strokeStyle = `rgba(${trail[i].r}, ${trail[i].g}, ${trail[i].b}, ${alpha})`;
-        tCtx.lineWidth = width;
-        tCtx.stroke();
-      }
-
-      requestAnimationFrame(drawTrail);
-    }
-    drawTrail();
-
-    const hoverTargets = document.querySelectorAll('a, button, .project-card, .skill-tag, .social-link, .exp-tag, .data-tool, .lang-card');
-    hoverTargets.forEach(el => {
-      el.addEventListener('mouseenter', () => { dot.classList.add('hovering'); });
-      el.addEventListener('mouseleave', () => { dot.classList.remove('hovering'); });
-    });
-
-    // ---- SCROLL REVEAL ----
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // ---- STAGGER GALLERY ITEMS ----
-    const galleryCards = document.querySelectorAll('.project-card');
-    galleryCards.forEach((card, i) => {
-      card.style.transitionDelay = `${(i % 6) * 0.08}s`;
-    });
-
-    // ---- NUMBER COUNTER ----
-    const statNumbers = document.querySelectorAll('.stat-number');
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.target);
-          let current = 0;
-          const increment = target / 40;
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              el.textContent = target + '+';
-              clearInterval(timer);
-            } else {
-              el.textContent = Math.floor(current);
-            }
-          }, 40);
-          counterObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    statNumbers.forEach(el => counterObserver.observe(el));
-
-    // ---- SMOOTH ANCHOR SCROLL ----
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // ---- PARALLAX HERO ----
-    window.addEventListener('scroll', () => {
-      const hero = document.querySelector('.hero');
-      const scrolled = window.pageYOffset;
-      if (scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-        hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.6;
-      }
-    });
-
-    // ---- NAV HIDE ON SCROLL ----
-    let lastScroll = 0;
-    const navEl = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll > lastScroll && currentScroll > 100) {
-        navEl.style.transform = 'translateY(-100%)';
-        navEl.style.transition = 'transform 0.4s ease';
-      } else {
-        navEl.style.transform = 'translateY(0)';
-      }
-      lastScroll = currentScroll;
-    });
-
-    // ---- TILT EFFECT ON PROJECT CARDS ----
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 18;
-        const rotateY = (centerX - x) / 18;
-        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
-        card.style.boxShadow = `0 20px 40px rgba(72, 24, 47, 0.15)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
-        card.style.boxShadow = 'none';
-        card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease';
-      });
-      card.addEventListener('mouseenter', () => {
-        card.style.transition = 'box-shadow 0.3s ease';
-      });
-    });
-
-    // ---- EXPERIENCE ITEMS STAGGER ----
-    const expItems = document.querySelectorAll('.exp-item');
-    expItems.forEach((item, i) => {
-      item.style.transitionDelay = `${i * 0.15}s`;
-    });
-
-    // ---- PARTICLE SYSTEM (Hero) ----
-    const pCanvas = document.getElementById('particleCanvas');
-    if (pCanvas) {
-      const pCtx = pCanvas.getContext('2d');
-      let particles = [];
-      const pMouse = { x: null, y: null, radius: 150 };
-      const pCount = window.innerWidth < 768 ? 50 : 100;
-
-      function pResize() {
-        const hero = document.getElementById('hero');
-        pCanvas.width = hero.offsetWidth;
-        pCanvas.height = hero.offsetHeight;
-      }
-      pResize();
-
-      for (let i = 0; i < pCount; i++) {
-        particles.push({
-          x: Math.random() * pCanvas.width,
-          y: Math.random() * pCanvas.height,
-          vx: (Math.random() - 0.5) * 0.4,
-          vy: (Math.random() - 0.5) * 0.4,
-          size: Math.random() * 2 + 0.5,
-          opacity: Math.random() * 0.4 + 0.1,
-        });
-      }
-
-      function pAnimate() {
-        pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
-        particles.forEach(p => {
-          if (pMouse.x) {
-            const dx = p.x - pMouse.x;
-            const dy = p.y - pMouse.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < pMouse.radius) {
-              const force = (pMouse.radius - dist) / pMouse.radius;
-              p.vx += (dx / dist) * force * 0.6;
-              p.vy += (dy / dist) * force * 0.6;
-            }
-          }
-          p.vx *= 0.99;
-          p.vy *= 0.99;
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < 0) p.x = pCanvas.width;
-          if (p.x > pCanvas.width) p.x = 0;
-          if (p.y < 0) p.y = pCanvas.height;
-          if (p.y > pCanvas.height) p.y = 0;
-          pCtx.beginPath();
-          pCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-          pCtx.fillStyle = `rgba(212, 203, 196, ${p.opacity})`;
-          pCtx.fill();
-        });
-        // Connect nearby particles
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 110) {
-              pCtx.beginPath();
-              pCtx.strokeStyle = `rgba(212, 203, 196, ${0.08 * (1 - dist / 110)})`;
-              pCtx.lineWidth = 0.5;
-              pCtx.moveTo(particles[i].x, particles[i].y);
-              pCtx.lineTo(particles[j].x, particles[j].y);
-              pCtx.stroke();
-            }
-          }
-        }
-        requestAnimationFrame(pAnimate);
-      }
-      pAnimate();
-
-      document.getElementById('hero').addEventListener('mousemove', e => {
-        const rect = pCanvas.getBoundingClientRect();
-        pMouse.x = e.clientX - rect.left;
-        pMouse.y = e.clientY - rect.top;
-      });
-      document.getElementById('hero').addEventListener('mouseleave', () => {
-        pMouse.x = null;
-        pMouse.y = null;
-      });
-      window.addEventListener('resize', pResize);
-    }
-
-    // ---- HORIZONTAL SCROLL GALLERY ----
-    const hWrapper = document.getElementById('hScrollWrapper');
-    const hTrack = document.getElementById('hScrollTrack');
-    if (hWrapper && hTrack) {
-      // Drag to scroll
-      let isDragging = false;
-      let startX, scrollLeft;
-
-      hWrapper.addEventListener('mousedown', e => {
-        isDragging = true;
-        hWrapper.style.cursor = 'grabbing';
-        startX = e.pageX - hWrapper.offsetLeft;
-        scrollLeft = hWrapper.scrollLeft;
-      });
-      hWrapper.addEventListener('mouseleave', () => { isDragging = false; hWrapper.style.cursor = 'grab'; });
-      hWrapper.addEventListener('mouseup', () => { isDragging = false; hWrapper.style.cursor = 'grab'; });
-      hWrapper.addEventListener('mousemove', e => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - hWrapper.offsetLeft;
-        hWrapper.scrollLeft = scrollLeft - (x - startX) * 1.5;
-      });
-
-      // Enable native horizontal scroll on the wrapper
-      hWrapper.style.overflowX = 'auto';
-      hWrapper.style.cursor = 'grab';
-      hWrapper.style.scrollbarWidth = 'none';
-      hWrapper.style.msOverflowStyle = 'none';
-
-      // Convert vertical wheel to horizontal scroll
-      hWrapper.addEventListener('wheel', e => {
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-          e.preventDefault();
-          hWrapper.scrollLeft += e.deltaY * 1.5;
-        }
-      }, { passive: false });
-    }
-
-    // ---- LANGUAGE BARS ANIMATION ----
-    const langBars = document.querySelectorAll('.lang-bar-fill');
-    const langObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const bar = entry.target;
-          bar.style.width = bar.dataset.width + '%';
-          langObserver.unobserve(bar);
-        }
-      });
-    }, { threshold: 0.5 });
-    langBars.forEach(bar => langObserver.observe(bar));
-
-    // ---- HAMBURGER MENU ----
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          setTimeout(() => {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 300);
-        }
-      });
-    });
-
-    // ---- TRANSLATION SYSTEM ----
-    const translations = {
-      es: {
-        nav_projects: 'Proyectos', nav_experience: 'Experiencia', nav_about: '¿Por qué moda?', nav_contact: 'Contacto',
-        hero_subtitle: 'Marketing & Product Mindset',
-        hero_tagline: 'Analizo datos, entiendo al cliente y los transformo en decisiones de producto.',
-        scroll: 'Scroll',
-        stat_projects: 'Proyectos', stat_years: 'Años experiencia', stat_clients: 'Clientes',
-        proj_label: 'Trabajos seleccionados', proj_title_1: 'Proyectos', proj_title_2: 'destacados',
-        proj_subtitle: 'Una selección de mis mejores trabajos en diseño, estrategia y comunicación digital.',
-        exp_label: 'Trayectoria profesional', exp_title_1: 'Donde he', exp_title_2: 'dejado huella',
-        exp_subtitle: 'Mi evolución profesional en Almacenes HJ — de analista de contenido a estratega digital integral.',
-        exp1_role: 'Analista de Contenido y Métricas', exp1_date: 'Inicio 2024',
-        exp1_desc: 'Elaboración de reportes sobre el rendimiento de posts en redes sociales. Seguimiento de métricas clave como alcance, engagement y CTR. Creación de dashboards en Excel y Looker Studio.',
-        exp2_role: 'Paid Media & Campañas Digitales',
-        exp2_desc: 'Planificación y optimización de campañas de paid media. Apoyo en campañas de Google Ads y Meta Ads. Definición de segmentación, objetivos y presupuestos. Monitorización de KPIs: CTR, CPA y ROAS.',
-        exp3_role: 'Coordinación de Evento & Campañas', exp3_date: 'Agosto 2024',
-        exp3_desc: 'Participación en el diseño conceptual del stand de Almacenes HJ. Coordinación con proveedores y logística del evento. Planificación de campañas de paid media para promocionar la presencia en feria. Seguimiento del rendimiento durante el evento.',
-        exp4_role: 'Gestión Comercial & Business Intelligence',
-        exp4_desc: 'Uso de SAP para consulta y seguimiento de datos comerciales. Análisis de inventario, ventas y productos. Elaboración de informes estratégicos para el equipo comercial.',
-        exp5_role: 'Estratega Digital & Colaboración Transversal', exp5_date: '2025 — Presente',
-        exp5_desc: 'Evaluación de resultados de campañas y eventos. Creación de dashboards de marketing y reporting avanzado. Apoyo en planificación de nuevas estrategias digitales y colaboración transversal entre departamentos.',
-        about_label: '¿Por qué moda?', about_hello: 'Hola, soy',
-        about_p1: 'Soy una persona curiosa por naturaleza y siempre me ha interesado entender cómo piensan las personas, qué las inspira y por qué conectan con ciertas marcas. Por eso decidí estudiar Marketing y Dirección Comercial en la UCAM, donde descubrí que lo que más me apasiona es gestionar y desarrollar una marca: desde analizar al consumidor, el mercado y los consumer insights, hasta transformar esa información en estrategias y campañas con impacto.',
-        about_p2: 'Me considero una persona organizada, persistente y muy orientada al aprendizaje. Disfruto trabajar con datos, analizar resultados y entender qué hay detrás de cada decisión estratégica, identificando oportunidades de mejora.',
-        about_p3: 'Valoro mucho aprender de distintas perspectivas y trabajar en equipo. Cuando un proyecto lo requiere, me gusta tomar iniciativa y asumir un rol de liderazgo para organizar el trabajo y convertir las ideas en resultados.',
-        about_p4: 'Actualmente me encuentro en una etapa de crecimiento en la que quiero seguir aprendiendo, explorar nuevas industrias y continuar desarrollándome profesionalmente, aportando análisis, ideas y compromiso a los proyectos en los que participe.',
-        lang_label: 'Idiomas', lang_title: 'Comunicación sin fronteras',
-        lang_es_name: 'Español', lang_es_level: 'Nativo', lang_es_cert: 'Lengua materna',
-        lang_en_name: 'Inglés', lang_en_level: 'Avanzado · C1', lang_en_cert: 'Certificación IELTS',
-        lang_fr_name: 'Francés', lang_fr_level: 'Intermedio · B2', lang_fr_cert: 'Nivel B2',
-        lang_pt_name: 'Portugués', lang_pt_level: 'Básico · A2', lang_pt_cert: 'Nivel A2',
-        contact_label: '¿Conectamos?', contact_title_1: 'Hagamos algo', contact_title_2: 'increíble', contact_title_3: 'juntos',
-        footer_made: 'Hecho con', footer_coffee: 'y mucho café',
-      },
-      en: {
-        nav_projects: 'Projects', nav_experience: 'Experience', nav_about: 'Why fashion?', nav_contact: 'Contact',
-        hero_subtitle: 'Marketing & Product Mindset',
-        hero_tagline: 'I analyze data, understand the customer, and turn insights into product decisions.',
-        scroll: 'Scroll',
-        stat_projects: 'Projects', stat_years: 'Years experience', stat_clients: 'Clients',
-        proj_label: 'Selected work', proj_title_1: 'Featured', proj_title_2: 'projects',
-        proj_subtitle: 'A selection of my best work in design, strategy and digital communication.',
-        exp_label: 'Professional path', exp_title_1: 'Where I\'ve', exp_title_2: 'left my mark',
-        exp_subtitle: 'My professional evolution at Almacenes HJ — from content analyst to integral digital strategist.',
-        exp1_role: 'Content & Metrics Analyst', exp1_date: 'Early 2024',
-        exp1_desc: 'Preparation of reports on social media post performance. Tracking key metrics such as reach, engagement and CTR. Creation of dashboards in Excel and Looker Studio.',
-        exp2_role: 'Paid Media & Digital Campaigns',
-        exp2_desc: 'Planning and optimization of paid media campaigns. Support in Google Ads and Meta Ads campaigns. Definition of targeting, objectives and budgets. KPI monitoring: CTR, CPA and ROAS.',
-        exp3_role: 'Event Coordination & Campaigns', exp3_date: 'August 2024',
-        exp3_desc: 'Participation in the conceptual design of the Almacenes HJ stand. Coordination with suppliers and event logistics. Planning paid media campaigns to promote trade fair presence. Performance tracking during the event.',
-        exp4_role: 'Commercial Management & Business Intelligence',
-        exp4_desc: 'Use of SAP for commercial data consultation and tracking. Inventory, sales and product analysis. Preparation of strategic reports for the commercial team.',
-        exp5_role: 'Digital Strategist & Cross-functional Collaboration', exp5_date: '2025 — Present',
-        exp5_desc: 'Evaluation of campaign and event results. Creation of marketing dashboards and advanced reporting. Support in planning new digital strategies and cross-departmental collaboration.',
-        about_label: 'Why fashion?', about_hello: 'Hi, I\'m',
-        about_p1: 'I\'m a naturally curious person and I\'ve always been interested in understanding how people think, what inspires them, and why they connect with certain brands. That\'s why I decided to study Marketing and Business Management at UCAM, where I discovered that what I\'m most passionate about is managing and developing a brand: from analyzing the consumer, the market and consumer insights, to transforming that information into strategies and campaigns with impact.',
-        about_p2: 'I consider myself an organized, persistent person who is very learning-oriented. I enjoy working with data, analyzing results and understanding what lies behind each strategic decision, identifying opportunities for improvement.',
-        about_p3: 'I truly value learning from different perspectives and working as a team. When a project requires it, I like to take initiative and assume a leadership role to organize the work and turn ideas into results.',
-        about_p4: 'I\'m currently at a stage of growth where I want to keep learning, explore new industries and continue developing professionally, bringing analysis, ideas and commitment to the projects I participate in.',
-        lang_label: 'Languages', lang_title: 'Communication without borders',
-        lang_es_name: 'Spanish', lang_es_level: 'Native', lang_es_cert: 'Mother tongue',
-        lang_en_name: 'English', lang_en_level: 'Advanced · C1', lang_en_cert: 'IELTS Certification',
-        lang_fr_name: 'French', lang_fr_level: 'Intermediate · B2', lang_fr_cert: 'B2 Level',
-        lang_pt_name: 'Portuguese', lang_pt_level: 'Basic · A2', lang_pt_cert: 'A2 Level',
-        contact_label: 'Shall we connect?', contact_title_1: 'Let\'s create something', contact_title_2: 'amazing', contact_title_3: 'together',
-        footer_made: 'Made with', footer_coffee: 'and lots of coffee',
-      },
-      fr: {
-        nav_projects: 'Projets', nav_experience: 'Expérience', nav_about: 'Pourquoi la mode ?', nav_contact: 'Contact',
-        hero_subtitle: 'Marketing & Product Mindset',
-        hero_tagline: 'J\'analyse les données, je comprends le client et je les transforme en décisions produit.',
-        scroll: 'Défiler',
-        stat_projects: 'Projets', stat_years: 'Ans d\'expérience', stat_clients: 'Clients',
-        proj_label: 'Travaux sélectionnés', proj_title_1: 'Projets', proj_title_2: 'en vedette',
-        proj_subtitle: 'Une sélection de mes meilleurs travaux en design, stratégie et communication digitale.',
-        exp_label: 'Parcours professionnel', exp_title_1: 'Là où j\'ai', exp_title_2: 'laissé ma marque',
-        exp_subtitle: 'Mon évolution professionnelle chez Almacenes HJ — d\'analyste de contenu à stratège digital intégral.',
-        exp1_role: 'Analyste de Contenu et Métriques', exp1_date: 'Début 2024',
-        exp1_desc: 'Élaboration de rapports sur la performance des publications sur les réseaux sociaux. Suivi des métriques clés comme la portée, l\'engagement et le CTR. Création de tableaux de bord sur Excel et Looker Studio.',
-        exp2_role: 'Paid Media & Campagnes Digitales',
-        exp2_desc: 'Planification et optimisation des campagnes de paid media. Support pour les campagnes Google Ads et Meta Ads. Définition du ciblage, des objectifs et des budgets. Suivi des KPIs: CTR, CPA et ROAS.',
-        exp3_role: 'Coordination d\'Événements & Campagnes', exp3_date: 'Août 2024',
-        exp3_desc: 'Participation à la conception du stand d\'Almacenes HJ. Coordination avec les fournisseurs et logistique de l\'événement. Planification de campagnes de paid media pour promouvoir la présence au salon. Suivi des performances pendant l\'événement.',
-        exp4_role: 'Gestion Commerciale & Business Intelligence',
-        exp4_desc: 'Utilisation de SAP pour la consultation et le suivi des données commerciales. Analyse des stocks, des ventes et des produits. Élaboration de rapports stratégiques pour l\'équipe commerciale.',
-        exp5_role: 'Stratège Digital & Collaboration Transversale', exp5_date: '2025 — Présent',
-        exp5_desc: 'Évaluation des résultats des campagnes et événements. Création de tableaux de bord marketing et reporting avancé. Soutien à la planification de nouvelles stratégies digitales et collaboration entre départements.',
-        about_label: 'Pourquoi la mode ?', about_hello: 'Bonjour, je suis',
-        about_p1: 'Je suis une personne naturellement curieuse et j\'ai toujours été intéressée par comprendre comment les gens pensent, ce qui les inspire et pourquoi ils se connectent à certaines marques. C\'est pourquoi j\'ai décidé d\'étudier le Marketing et la Direction Commerciale à l\'UCAM, où j\'ai découvert que ce qui me passionne le plus, c\'est gérer et développer une marque: de l\'analyse du consommateur, du marché et des consumer insights, à la transformation de ces informations en stratégies et campagnes à fort impact.',
-        about_p2: 'Je me considère comme une personne organisée, persévérante et très orientée vers l\'apprentissage. J\'aime travailler avec des données, analyser des résultats et comprendre ce qui se cache derrière chaque décision stratégique, en identifiant les opportunités d\'amélioration.',
-        about_p3: 'J\'accorde beaucoup de valeur à l\'apprentissage de perspectives différentes et au travail en équipe. Quand un projet l\'exige, j\'aime prendre l\'initiative et assumer un rôle de leadership pour organiser le travail et transformer les idées en résultats.',
-        about_p4: 'Je suis actuellement dans une phase de croissance où je souhaite continuer à apprendre, explorer de nouvelles industries et poursuivre mon développement professionnel, en apportant analyse, idées et engagement aux projets auxquels je participe.',
-        lang_label: 'Langues', lang_title: 'Communication sans frontières',
-        lang_es_name: 'Espagnol', lang_es_level: 'Natif', lang_es_cert: 'Langue maternelle',
-        lang_en_name: 'Anglais', lang_en_level: 'Avancé · C1', lang_en_cert: 'Certification IELTS',
-        lang_fr_name: 'Français', lang_fr_level: 'Intermédiaire · B2', lang_fr_cert: 'Niveau B2',
-        lang_pt_name: 'Portugais', lang_pt_level: 'Basique · A2', lang_pt_cert: 'Niveau A2',
-        contact_label: 'On se connecte ?', contact_title_1: 'Créons quelque chose', contact_title_2: 'd\'incroyable', contact_title_3: 'ensemble',
-        footer_made: 'Fait avec', footer_coffee: 'et beaucoup de café',
-      }
-    };
-
-    function setLanguage(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.dataset.i18n;
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-      // Also translate mobile menu links
-      document.querySelectorAll('[data-i18n-mobile]').forEach(el => {
-        const key = el.dataset.i18nMobile;
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-      document.documentElement.lang = lang === 'es' ? 'es' : lang === 'fr' ? 'fr' : 'en';
-    }
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-    });
-  </script>
-  
+<!-- NAVEGACIÓN Y ACCESIBILIDAD -->
+<a data-i18n="skip" class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="preloader" aria-hidden="true">
+<span>Andrea Saldarriaga</span>
+</div>
+<div class="cursor" aria-hidden="true">
+</div>
+<canvas id="trail" aria-hidden="true">
+</canvas>
+<header>
+<nav aria-label="Navegación principal" data-i18n-attr="aria-label:nav_label">
+<a class="logo" href="#hero" aria-label="Andrea Saldarriaga · Inicio" data-i18n-attr="aria-label:home">ASC<span aria-hidden="true">.</span>
+</a>
+<div class="nav-actions">
+<div class="languages" role="group" aria-label="Seleccionar idioma" data-i18n-attr="aria-label:choose_language">
+<button type="button" data-lang="es" lang="es" aria-pressed="true" aria-label="Español" data-i18n-attr="aria-label:select_es">ES</button>
+<button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="Inglés" data-i18n-attr="aria-label:select_en">EN</button>
+<button type="button" data-lang="fr" lang="fr" aria-pressed="false" aria-label="Francés" data-i18n-attr="aria-label:select_fr">FR</button>
+</div>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir o cerrar menú" data-i18n-attr="aria-label:menu">
+<span>
+</span>
+<span>
+</span>
+</button>
+</div>
+<ul class="nav-links" id="nav-links">
+<li>
+<a data-i18n="nav_sobre-mi" href="#sobre-mi">Sobre mí</a>
+</li>
+<li>
+<a data-i18n="nav_experiencia" href="#experiencia">Experiencia</a>
+</li>
+<li>
+<a data-i18n="nav_formacion" href="#formacion">Formación</a>
+</li>
+<li>
+<a data-i18n="nav_contacto" href="#contacto">Contacto</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id="contenido" tabindex="-1">
+<!-- PORTADA -->
+<section class="hero" id="hero" aria-labelledby="hero-name">
+<canvas id="particles" aria-hidden="true">
+</canvas>
+<div class="hero-content">
+<h1 id="hero-name">Andrea <span class="accent">Saldarriaga</span>
+</h1>
+<p data-i18n="subtitle" class="hero-subtitle">Marketing Intelligence · Consumer Insights · Data Analytics</p>
+<p data-i18n="hero_phrase" class="hero-phrase">Investigo mercados, interpreto datos y transformo hallazgos en recomendaciones que ayudan a tomar mejores decisiones de negocio.</p>
+<div class="buttons">
+<a data-i18n="see_experience" href="#experiencia" class="button">Ver experiencia</a>
+<a data-i18n="download" href="cv/Andrea-Saldarriaga-CV.pdf" download class="button secondary">Descargar CV</a>
+</div>
+</div>
+<a data-i18n="scroll" href="#sobre-mi" class="scroll-indicator">Scroll</a>
+</section>
+<!-- CINTA: EL SEGUNDO GRUPO ES UNA COPIA DECORATIVA -->
+<div class="marquee">
+<div class="marquee-track">
+<span>CONSUMER INSIGHTS ● MARKET RESEARCH ● DATA ANALYTICS ● MARKETING INTELLIGENCE ● E-COMMERCE ● REPORTING ● BUSINESS STRATEGY ● </span>
+<span aria-hidden="true">CONSUMER INSIGHTS ● MARKET RESEARCH ● DATA ANALYTICS ● MARKETING INTELLIGENCE ● E-COMMERCE ● REPORTING ● BUSINESS STRATEGY ● </span>
+</div>
+</div>
+<!-- SOBRE MÍ -->
+<section class="about section" id="sobre-mi" aria-labelledby="about-title">
+<div class="container">
+<div class="about-grid">
+<div class="portrait reveal">
+<picture>
+<source srcset="img/andrea.webp" type="image/webp">
+<img src="img/andrea.jpg" width="720" height="986" loading="lazy" decoding="async" alt="Retrato de Andrea Saldarriaga" data-i18n-attr="alt:portrait">
+</picture>
+</div>
+<div class="about-copy reveal">
+<p data-i18n="about_label" class="eyebrow">Sobre mí</p>
+<h2 data-i18n-html="about_title" id="about-title">Hola, soy <span class="accent">Andrea</span>
+</h2>
+<p data-i18n-html="about_1">Mi experiencia combina investigación de mercados, análisis de datos, inteligencia comercial y marketing digital.</p>
+<p data-i18n-html="about_2">En The Fini Company he participado en proyectos de <strong>investigación del consumidor y análisis de mercado.</strong> Mi trabajo consiste en interpretar datos y aportar información útil a los equipos de Brand y Comercial.</p>
+<p data-i18n-html="about_3">Me interesa especialmente <strong>transformar preguntas de negocio en investigaciones</strong>, identificar patrones de comportamiento y comunicar hallazgos que ayuden a tomar decisiones.</p>
+<p data-i18n-html="about_4">En Almacenes HJ he trabajado con indicadores comerciales, e-commerce, optimización de la experiencia digital y análisis del rendimiento de contenidos.</p>
+<p data-i18n-html="about_5">Disfruto combinando el rigor analítico con la creatividad y la visión estratégica. Me motiva aprender de diferentes equipos, herramientas y perspectivas.</p>
+<p data-i18n-html="about_6">Busco seguir creciendo profesionalmente en <strong>Marketing Intelligence y Consumer Insights.</strong>
+</p>
+</div>
+</div>
+<div class="pillars reveal">
+<div>
+<h3 data-i18n="pillar_0">Investigo</h3>
+<p data-i18n="pillar_desc_0">Formulo preguntas y entiendo al consumidor.</p>
+</div>
+<div>
+<h3 data-i18n="pillar_1">Analizo</h3>
+<p data-i18n="pillar_desc_1">Segmento, comparo y encuentro patrones.</p>
+</div>
+<div>
+<h3 data-i18n="pillar_2">Comunico</h3>
+<p data-i18n="pillar_desc_2">Convierto hallazgos en mensajes claros.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- EXPERIENCIA PROFESIONAL -->
+<section class="experience section" id="experiencia" aria-labelledby="experience-title">
+<div class="container">
+<p data-i18n="experience_label" class="eyebrow">Experiencia profesional</p>
+<h2 data-i18n-html="experience_title" id="experience-title">Investigación de mercados y análisis de <em>datos para el negocio</em>
+</h2>
+<article class="experience-card reveal" id="fini" aria-labelledby="fini-title">
+<div class="card-top">
+<p class="company">The Fini Company</p>
+<p data-i18n="fini_date" class="date">2026 – Actualidad</p>
+</div>
+<h3 data-i18n="fini_role" id="fini-title">Marketing Intelligence &amp; Consumer Insights</h3>
+<ul class="duties">
+<li data-i18n="fini_1">Investigación de mercados y análisis del comportamiento del consumidor para apoyar decisiones de negocio.</li>
+<li data-i18n="fini_2">Diseño y análisis de encuestas mediante Toluna, incluyendo filtros y segmentación de datos.</li>
+<li data-i18n="fini_3">Segmentación de consumidores por hábitos de compra, generaciones y hogares.</li>
+<li data-i18n="fini_4">Análisis de paneles de consumidores NIQ y tendencias de mercado.</li>
+<li data-i18n="fini_5">Extracción, limpieza, comparación y visualización de datos.</li>
+<li data-i18n="fini_6">Evaluación de campañas y activaciones de marca.</li>
+<li data-i18n="fini_7">Elaboración de informes de investigación y presentaciones ejecutivas.</li>
+<li data-i18n="fini_8">Síntesis de insights y recomendaciones para apoyar decisiones de Brand y Comercial.</li>
+</ul>
+<p class="card-tools">
+<span data-i18n="tools_label">Herramientas:</span> Toluna · NIQ · Excel</p>
+</article>
+<article class="experience-card reveal" id="hj-ventas" aria-labelledby="hj-ventas-title">
+<div class="card-top">
+<p class="company">Almacenes HJ</p>
+<p data-i18n="sales_date" class="date">2024 – 2025</p>
+</div>
+<h3 data-i18n="sales_role" id="hj-ventas-title">Analista de Ventas Junior · E-commerce &amp; Marketing Digital</h3>
+<div class="highlight">
+<p data-i18n="sales_metric" class="metric">80 %</p>
+<p data-i18n="sales_metric_desc">de los productos más vendidos en tienda física no se trabajaban en el canal online; propuse su activación digital.</p>
+</div>
+<ul class="duties">
+<li data-i18n="sales_1">Seguimiento de ventas en Shopify, análisis de indicadores comerciales y elaboración de reportes para evaluar el rendimiento.</li>
+<li data-i18n="sales_2">Análisis de navegación, tasa de rebote y abandono de carrito para identificar puntos de fricción y oportunidades de mejora.</li>
+<li data-i18n="sales_3">Creación de landing pages y apoyo en acciones de email marketing orientadas a la conversión de leads.</li>
+<li data-i18n="sales_4">Dashboards e informes de ventas en Excel avanzado y Looker Studio.</li>
+</ul>
+<p class="card-tools">
+<span data-i18n="tools_label">Herramientas:</span> Shopify · Excel · Looker Studio · Google Analytics</p>
+</article>
+<article class="experience-card reveal" id="hj-redes" aria-labelledby="hj-redes-title">
+<div class="card-top">
+<p class="company">Almacenes HJ</p>
+<p data-i18n="social_date" class="date">2026 – Actualidad</p>
+</div>
+<h3 data-i18n="social_role" id="hj-redes-title">Community Manager · Social Media Analytics</h3>
+<div class="highlight">
+<p data-i18n="social_metric" class="metric metric-wide">15.000 → +42.000</p>
+<p data-i18n="social_metric_desc">visualizaciones mensuales (crecimiento aproximado del 180 %).</p>
+</div>
+<p data-i18n="social_body">Planificación de contenidos, seguimiento de indicadores de redes sociales y optimización del rendimiento digital, con benchmarking de competidores (alcance, engagement, formatos y tendencias).</p>
+<p data-i18n="social_note" class="small-note">Resultado correspondiente a redes sociales, independiente de las ventas de e-commerce.</p>
+</article>
+</div>
+</section>
+<!-- FORMACIÓN Y HERRAMIENTAS -->
+<section class="education section" id="formacion" aria-labelledby="education-title">
+<div class="container">
+<p data-i18n="education_label" class="eyebrow">Formación</p>
+<h2 data-i18n-html="education_title" id="education-title">Marketing con base analítica</h2>
+<div class="education-grid reveal">
+<article>
+<h3 data-i18n="degree">Grado en Marketing y Dirección Comercial · Mención en Marketing Digital</h3>
+<p>UCAM · Universidad Católica San Antonio de Murcia</p>
+<p>2022 – 2027</p>
+</article>
+<article>
+<h3>Introduction to Data Analytics</h3>
+<p>IBM</p>
+<p data-i18n="ibm_description">Fundamentos de análisis de datos, exploración de información y comunicación de resultados para la toma de decisiones.</p>
+</article>
+</div>
+<div class="tool-groups reveal">
+<div>
+<h3 data-i18n="group_research">Investigación y mercado</h3>
+<ul class="chips">
+<li class="data-tool">Toluna</li>
+<li class="data-tool">NIQ Discover</li>
+<li class="data-tool">SPSS</li>
+</ul>
+</div>
+<div>
+<h3 data-i18n="group_analysis">Análisis y visualización</h3>
+<ul class="chips">
+<li data-i18n="advanced_excel" class="data-tool">Excel avanzado</li>
+<li class="data-tool">SQL</li>
+<li class="data-tool">Power BI</li>
+<li class="data-tool">Looker Studio</li>
+</ul>
+</div>
+<div>
+<h3 data-i18n="group_digital">Marketing digital y e-commerce</h3>
+<ul class="chips">
+<li class="data-tool">Shopify</li>
+<li class="data-tool">Google Analytics</li>
+<li class="data-tool">SAP Business One</li>
+</ul>
+</div>
+</div>
+<p data-i18n="tools_note" class="tools-note">Las herramientas reflejan experiencia profesional y conocimientos adquiridos durante mi formación; no todas se utilizaron en los mismos puestos.</p>
+</div>
+</section>
+<!-- IDIOMAS: ESCALA MCER DE SEIS PASOS -->
+<section class="language-section section" id="idiomas" aria-labelledby="language-title">
+<div class="container">
+<p data-i18n="languages_label" class="eyebrow">Idiomas</p>
+<h2 data-i18n-html="languages_title" id="language-title">Comunicación sin fronteras</h2>
+<div class="language-grid">
+<article class="language-card reveal">
+<span class="language-code" aria-hidden="true">ES</span>
+<h3 data-i18n="language_es">Español</h3>
+<p data-i18n="level_es">Nativo</p>
+<p data-i18n="certificate_es">Lengua materna</p>
+<ol class="scale" aria-hidden="true">
+<li class="filled">A1</li>
+<li class="filled">A2</li>
+<li class="filled">B1</li>
+<li class="filled">B2</li>
+<li class="filled">C1</li>
+<li class="filled">C2</li>
+</ol>
+</article>
+<article class="language-card reveal">
+<span class="language-code" aria-hidden="true">EN</span>
+<h3 data-i18n="language_en">Inglés</h3>
+<p data-i18n="level_en">Avanzado · C1</p>
+<p data-i18n="certificate_en">Certificación IELTS</p>
+<ol class="scale" aria-hidden="true">
+<li class="filled">A1</li>
+<li class="filled">A2</li>
+<li class="filled">B1</li>
+<li class="filled">B2</li>
+<li class="filled">C1</li>
+<li class="unfilled">C2</li>
+</ol>
+</article>
+<article class="language-card reveal">
+<span class="language-code" aria-hidden="true">FR</span>
+<h3 data-i18n="language_fr">Francés</h3>
+<p data-i18n="level_fr">Intermedio alto · B2</p>
+<p data-i18n="certificate_fr">DELF B2</p>
+<ol class="scale" aria-hidden="true">
+<li class="filled">A1</li>
+<li class="filled">A2</li>
+<li class="filled">B1</li>
+<li class="filled">B2</li>
+<li class="unfilled">C1</li>
+<li class="unfilled">C2</li>
+</ol>
+</article>
+<article class="language-card reveal">
+<span class="language-code" aria-hidden="true">PT</span>
+<h3 data-i18n="language_pt">Portugués</h3>
+<p data-i18n="level_pt">Básico · A2</p>
+<p data-i18n="certificate_pt">Nivel A2</p>
+<ol class="scale" aria-hidden="true">
+<li class="filled">A1</li>
+<li class="filled">A2</li>
+<li class="unfilled">B1</li>
+<li class="unfilled">B2</li>
+<li class="unfilled">C1</li>
+<li class="unfilled">C2</li>
+</ol>
+</article>
+</div>
+</div>
+</section>
+<!-- CONTACTO -->
+<section class="contact section" id="contacto" aria-labelledby="contact-title">
+<div class="container reveal">
+<p data-i18n="contact_label" class="eyebrow">¿Conectamos?</p>
+<h2 data-i18n-html="contact_title" id="contact-title">
+<span>Convirtamos datos</span>
+<span class="accent">en</span>
+<span>decisiones</span>
+</h2>
+<a class="contact-email" href="mailto:andrea.saldarriagacadavid04@gmail.com">andrea.saldarriagacadavid04@gmail.com</a>
+<div class="buttons">
+<a class="button linkedin" href="https://www.linkedin.com/in/andrea-saldarriagac/" rel="noopener" target="_blank">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3 9h4v12H3Zm6 0h4v2c1-3 8-4 8 4v6h-4v-6c0-4-4-3-4 0v6H9Z"/>
+</svg>
+<span>LinkedIn</span>
+</a>
+<a data-i18n="download" href="cv/Andrea-Saldarriaga-CV.pdf" download class="button secondary">Descargar CV</a>
+</div>
+</div>
+</section>
+</main>
+<!-- PIE -->
+<footer>
+<p>© 2026 Andrea Saldarriaga Cadavid</p>
+<p data-i18n="footer_note">Portafolio profesional · Sin datos internos ni resultados confidenciales.</p>
+</footer>
 <script>
-/* ACTUALIZACIÓN DEL CV — CONSERVA EL DISEÑO ORIGINAL */
-(() => {
-  const uno = selector => document.querySelector(selector);
-  const todos = selector => [...document.querySelectorAll(selector)];
-
-  function texto(selector, contenido) {
-    const elemento = uno(selector);
-    if (elemento) elemento.textContent = contenido;
+// ========== I18N: EDITAR AQUÍ LAS TRES TRADUCCIONES CON LAS MISMAS CLAVES ==========
+const I18N = {
+  "es": {
+    "meta_title": "Andrea Saldarriaga | Marketing Intelligence & Consumer Insights",
+    "meta_description": "Portafolio profesional de Andrea Saldarriaga: investigación de mercados, consumer insights, análisis de datos y marketing digital orientados a decisiones de negocio.",
+    "skip": "Saltar al contenido",
+    "nav_label": "Navegación principal",
+    "home": "Andrea Saldarriaga · Inicio",
+    "choose_language": "Seleccionar idioma",
+    "select_es": "Español",
+    "select_en": "Inglés",
+    "select_fr": "Francés",
+    "menu": "Abrir o cerrar menú",
+    "nav_experiencia": "Experiencia",
+    "nav_sobre-mi": "Sobre mí",
+    "nav_formacion": "Formación",
+    "nav_contacto": "Contacto",
+    "subtitle": "Marketing Intelligence · Consumer Insights · Data Analytics",
+    "hero_phrase": "Investigo mercados, interpreto datos y transformo hallazgos en recomendaciones que ayudan a tomar mejores decisiones de negocio.",
+    "see_experience": "Ver experiencia",
+    "download": "Descargar CV",
+    "scroll": "Scroll",
+    "portrait": "Retrato de Andrea Saldarriaga",
+    "about_label": "Sobre mí",
+    "about_title": "Hola, soy <span class=\"accent\">Andrea</span>",
+    "about_1": "Mi experiencia combina investigación de mercados, análisis de datos, inteligencia comercial y marketing digital.",
+    "about_2": "En The Fini Company he participado en proyectos de <strong>investigación del consumidor y análisis de mercado.</strong> Mi trabajo consiste en interpretar datos y aportar información útil a los equipos de Brand y Comercial.",
+    "about_3": "Me interesa especialmente <strong>transformar preguntas de negocio en investigaciones</strong>, identificar patrones de comportamiento y comunicar hallazgos que ayuden a tomar decisiones.",
+    "about_4": "En Almacenes HJ he trabajado con indicadores comerciales, e-commerce, optimización de la experiencia digital y análisis del rendimiento de contenidos.",
+    "about_5": "Disfruto combinando el rigor analítico con la creatividad y la visión estratégica. Me motiva aprender de diferentes equipos, herramientas y perspectivas.",
+    "about_6": "Busco seguir creciendo profesionalmente en <strong>Marketing Intelligence y Consumer Insights.</strong>",
+    "pillar_0": "Investigo",
+    "pillar_desc_0": "Formulo preguntas y entiendo al consumidor.",
+    "pillar_1": "Analizo",
+    "pillar_desc_1": "Segmento, comparo y encuentro patrones.",
+    "pillar_2": "Comunico",
+    "pillar_desc_2": "Convierto hallazgos en mensajes claros.",
+    "experience_label": "Experiencia profesional",
+    "experience_title": "Investigación de mercados y análisis de <em>datos para el negocio</em>",
+    "fini_date": "2026 – Actualidad",
+    "fini_role": "Marketing Intelligence & Consumer Insights",
+    "fini_1": "Investigación de mercados y análisis del comportamiento del consumidor para apoyar decisiones de negocio.",
+    "fini_2": "Diseño y análisis de encuestas mediante Toluna, incluyendo filtros y segmentación de datos.",
+    "fini_3": "Segmentación de consumidores por hábitos de compra, generaciones y hogares.",
+    "fini_4": "Análisis de paneles de consumidores NIQ y tendencias de mercado.",
+    "fini_5": "Extracción, limpieza, comparación y visualización de datos.",
+    "fini_6": "Evaluación de campañas y activaciones de marca.",
+    "fini_7": "Elaboración de informes de investigación y presentaciones ejecutivas.",
+    "fini_8": "Síntesis de insights y recomendaciones para apoyar decisiones de Brand y Comercial.",
+    "tools_label": "Herramientas:",
+    "sales_date": "2024 – 2025",
+    "sales_role": "Analista de Ventas Junior · E-commerce & Marketing Digital",
+    "sales_metric": "80 %",
+    "sales_metric_desc": "de los productos más vendidos en tienda física no se trabajaban en el canal online; propuse su activación digital.",
+    "sales_1": "Seguimiento de ventas en Shopify, análisis de indicadores comerciales y elaboración de reportes para evaluar el rendimiento.",
+    "sales_2": "Análisis de navegación, tasa de rebote y abandono de carrito para identificar puntos de fricción y oportunidades de mejora.",
+    "sales_3": "Creación de landing pages y apoyo en acciones de email marketing orientadas a la conversión de leads.",
+    "sales_4": "Dashboards e informes de ventas en Excel avanzado y Looker Studio.",
+    "social_date": "2026 – Actualidad",
+    "social_role": "Community Manager · Social Media Analytics",
+    "social_metric": "15.000 → +42.000",
+    "social_metric_desc": "visualizaciones mensuales (crecimiento aproximado del 180 %).",
+    "social_body": "Planificación de contenidos, seguimiento de indicadores de redes sociales y optimización del rendimiento digital, con benchmarking de competidores (alcance, engagement, formatos y tendencias).",
+    "social_note": "Resultado correspondiente a redes sociales, independiente de las ventas de e-commerce.",
+    "education_label": "Formación",
+    "education_title": "Marketing con base analítica",
+    "degree": "Grado en Marketing y Dirección Comercial · Mención en Marketing Digital",
+    "ibm_description": "Fundamentos de análisis de datos, exploración de información y comunicación de resultados para la toma de decisiones.",
+    "group_research": "Investigación y mercado",
+    "group_analysis": "Análisis y visualización",
+    "advanced_excel": "Excel avanzado",
+    "group_digital": "Marketing digital y e-commerce",
+    "tools_note": "Las herramientas reflejan experiencia profesional y conocimientos adquiridos durante mi formación; no todas se utilizaron en los mismos puestos.",
+    "languages_label": "Idiomas",
+    "languages_title": "Comunicación sin fronteras",
+    "language_es": "Español",
+    "level_es": "Nativo",
+    "certificate_es": "Lengua materna",
+    "language_en": "Inglés",
+    "level_en": "Avanzado · C1",
+    "certificate_en": "Certificación IELTS",
+    "language_fr": "Francés",
+    "level_fr": "Intermedio alto · B2",
+    "certificate_fr": "DELF B2",
+    "language_pt": "Portugués",
+    "level_pt": "Básico · A2",
+    "certificate_pt": "Nivel A2",
+    "contact_label": "¿Conectamos?",
+    "contact_title": "<span>Convirtamos datos</span> <span class=\"accent\">en</span> <span>decisiones</span>",
+    "footer_note": "Portafolio profesional · Sin datos internos ni resultados confidenciales."
+  },
+  "en": {
+    "meta_title": "Andrea Saldarriaga | Marketing Intelligence & Consumer Insights",
+    "meta_description": "Andrea Saldarriaga’s professional portfolio: market research, consumer insights, data analytics and digital marketing to inform business decisions.",
+    "skip": "Skip to content",
+    "nav_label": "Main navigation",
+    "home": "Andrea Saldarriaga · Home",
+    "choose_language": "Choose language",
+    "select_es": "Spanish",
+    "select_en": "English",
+    "select_fr": "French",
+    "menu": "Toggle menu",
+    "nav_experiencia": "Experience",
+    "nav_sobre-mi": "About",
+    "nav_formacion": "Education",
+    "nav_contacto": "Contact",
+    "subtitle": "Marketing Intelligence · Consumer Insights · Data Analytics",
+    "hero_phrase": "I research markets, interpret data and turn findings into recommendations that help businesses make better decisions.",
+    "see_experience": "View experience",
+    "download": "Download CV",
+    "scroll": "Scroll",
+    "portrait": "Portrait of Andrea Saldarriaga",
+    "about_label": "About me",
+    "about_title": "Hello, I’m <span class=\"accent\">Andrea</span>",
+    "about_1": "My experience brings together market research, data analytics, business intelligence and digital marketing.",
+    "about_2": "At The Fini Company, I have contributed to <strong>consumer research and market analysis</strong> projects. My work involves interpreting data and providing useful information to the Brand and Sales teams.",
+    "about_3": "I am particularly interested in <strong>turning business questions into research</strong>, identifying behavioural patterns and communicating findings that inform decisions.",
+    "about_4": "At Almacenes HJ, I have worked with sales metrics, e-commerce, digital experience optimisation and content performance analysis.",
+    "about_5": "I enjoy combining analytical rigour with creativity and strategic thinking. I am motivated by learning from different teams, tools and perspectives.",
+    "about_6": "I aim to continue developing my career in <strong>Marketing Intelligence and Consumer Insights.</strong>",
+    "pillar_0": "Research",
+    "pillar_desc_0": "I ask questions and understand consumers.",
+    "pillar_1": "Analyse",
+    "pillar_desc_1": "I segment, compare and identify patterns.",
+    "pillar_2": "Communicate",
+    "pillar_desc_2": "I turn findings into clear messages.",
+    "experience_label": "Professional experience",
+    "experience_title": "Market research and <em>data analysis for business</em>",
+    "fini_date": "2026 – Present",
+    "fini_role": "Marketing Intelligence & Consumer Insights",
+    "fini_1": "Market research and consumer behaviour analysis to support business decisions.",
+    "fini_2": "Survey design and analysis using Toluna, including filters and data segmentation.",
+    "fini_3": "Consumer segmentation by purchasing habits, generations and households.",
+    "fini_4": "Analysis of NIQ consumer panels and market trends.",
+    "fini_5": "Data extraction, cleaning, comparison and visualisation.",
+    "fini_6": "Evaluation of campaigns and brand activations.",
+    "fini_7": "Preparation of research reports and executive presentations.",
+    "fini_8": "Synthesis of insights and recommendations to support decisions by the Brand and Sales teams.",
+    "tools_label": "Tools:",
+    "sales_date": "2024 – 2025",
+    "sales_role": "Junior Sales Analyst · E-commerce & Digital Marketing",
+    "sales_metric": "80%",
+    "sales_metric_desc": "of the best-selling products in physical stores were not being worked on in the online channel; I proposed activating them digitally.",
+    "sales_1": "Sales tracking in Shopify, analysis of sales metrics and reporting to evaluate performance.",
+    "sales_2": "Analysis of browsing behaviour, bounce rate and cart abandonment to identify friction points and opportunities for improvement.",
+    "sales_3": "Creation of landing pages and support for email marketing initiatives aimed at converting leads.",
+    "sales_4": "Sales dashboards and reports using advanced Excel and Looker Studio.",
+    "social_date": "2026 – Present",
+    "social_role": "Community Manager · Social Media Analytics",
+    "social_metric": "15,000 → +42,000",
+    "social_metric_desc": "monthly views (approximately 180% growth).",
+    "social_body": "Content planning, social media metrics tracking and digital performance optimisation, with competitor benchmarking (reach, engagement, formats and trends).",
+    "social_note": "This result relates to social media and is independent of e-commerce sales.",
+    "education_label": "Education",
+    "education_title": "Marketing with an analytical foundation",
+    "degree": "Bachelor’s Degree in Marketing and Sales Management · Specialisation in Digital Marketing",
+    "ibm_description": "Foundations of data analytics, information exploration and communicating results to inform decisions.",
+    "group_research": "Market research",
+    "group_analysis": "Analysis and visualisation",
+    "advanced_excel": "Advanced Excel",
+    "group_digital": "Digital marketing and e-commerce",
+    "tools_note": "These tools reflect my professional experience and knowledge gained during my education; they were not all used in the same roles.",
+    "languages_label": "Languages",
+    "languages_title": "Communication without borders",
+    "language_es": "Spanish",
+    "level_es": "Native",
+    "certificate_es": "Mother tongue",
+    "language_en": "English",
+    "level_en": "Advanced · C1",
+    "certificate_en": "IELTS certification",
+    "language_fr": "French",
+    "level_fr": "Upper intermediate · B2",
+    "certificate_fr": "DELF B2",
+    "language_pt": "Portuguese",
+    "level_pt": "Elementary · A2",
+    "certificate_pt": "Level A2",
+    "contact_label": "Let’s connect",
+    "contact_title": "<span>Let’s turn data</span> <span class=\"accent\">into</span> <span>decisions</span>",
+    "footer_note": "Professional portfolio · No internal data or confidential results."
+  },
+  "fr": {
+    "meta_title": "Andrea Saldarriaga | Marketing Intelligence & Consumer Insights",
+    "meta_description": "Portfolio professionnel d’Andrea Saldarriaga : études de marché, connaissance des consommateurs, analyse de données et marketing digital au service des décisions stratégiques.",
+    "skip": "Aller au contenu",
+    "nav_label": "Navigation principale",
+    "home": "Andrea Saldarriaga · Accueil",
+    "choose_language": "Choisir la langue",
+    "select_es": "Espagnol",
+    "select_en": "Anglais",
+    "select_fr": "Français",
+    "menu": "Ouvrir ou fermer le menu",
+    "nav_experiencia": "Expérience",
+    "nav_sobre-mi": "À propos",
+    "nav_formacion": "Formation",
+    "nav_contacto": "Contact",
+    "subtitle": "Marketing Intelligence · Consumer Insights · Data Analytics",
+    "hero_phrase": "J’étudie les marchés, j’interprète les données et je transforme les résultats en recommandations qui aident à prendre de meilleures décisions business.",
+    "see_experience": "Voir mon expérience",
+    "download": "Télécharger le CV",
+    "scroll": "Défiler",
+    "portrait": "Portrait d’Andrea Saldarriaga",
+    "about_label": "À propos",
+    "about_title": "Bonjour, je suis <span class=\"accent\">Andrea</span>",
+    "about_1": "Mon expérience associe études de marché, analyse de données, intelligence commerciale et marketing digital.",
+    "about_2": "Chez The Fini Company, j’ai participé à des projets d’<strong>études consommateurs et d’analyse de marché.</strong> Mon travail consiste à interpréter les données et à fournir des informations utiles aux équipes Brand et commerciales.",
+    "about_3": "Je m’intéresse particulièrement à la manière de <strong>transformer les questions business en études</strong>, de repérer les comportements récurrents et de communiquer les résultats pour éclairer les décisions.",
+    "about_4": "Chez Almacenes HJ, j’ai travaillé sur les indicateurs commerciaux, l’e-commerce, l’optimisation de l’expérience digitale et l’analyse de la performance des contenus.",
+    "about_5": "J’aime allier rigueur analytique, créativité et vision stratégique. Ce qui me motive : apprendre au contact d’équipes, d’outils et de points de vue différents.",
+    "about_6": "Je souhaite poursuivre mon développement professionnel en <strong>Marketing Intelligence et Consumer Insights.</strong>",
+    "pillar_0": "Étudier",
+    "pillar_desc_0": "Je formule des questions et je comprends les consommateurs.",
+    "pillar_1": "Analyser",
+    "pillar_desc_1": "Je segmente, je compare et je repère des schémas.",
+    "pillar_2": "Communiquer",
+    "pillar_desc_2": "Je transforme les résultats en messages clairs.",
+    "experience_label": "Expérience professionnelle",
+    "experience_title": "Études de marché et analyse de <em>données au service de l’entreprise</em>",
+    "fini_date": "2026 – Aujourd’hui",
+    "fini_role": "Marketing Intelligence & Consumer Insights",
+    "fini_1": "Études de marché et analyse du comportement des consommateurs pour appuyer les décisions business.",
+    "fini_2": "Conception et analyse d’enquêtes sur Toluna, avec filtres et segmentation des données.",
+    "fini_3": "Segmentation des consommateurs selon leurs habitudes d’achat, leur génération et leur foyer.",
+    "fini_4": "Analyse des panels de consommateurs NIQ et des tendances du marché.",
+    "fini_5": "Extraction, nettoyage, comparaison et visualisation des données.",
+    "fini_6": "Évaluation des campagnes et des activations de marque.",
+    "fini_7": "Réalisation de rapports d’études et de présentations de synthèse pour la direction.",
+    "fini_8": "Synthèse des insights et des recommandations pour appuyer les décisions des équipes Brand et commerciales.",
+    "tools_label": "Outils :",
+    "sales_date": "2024 – 2025",
+    "sales_role": "Analyste des ventes junior · E-commerce et marketing digital",
+    "sales_metric": "80 %",
+    "sales_metric_desc": "des produits les plus vendus en magasin n’étaient pas exploités sur le canal en ligne ; j’ai proposé leur activation digitale.",
+    "sales_1": "Suivi des ventes sur Shopify, analyse des indicateurs commerciaux et réalisation de rapports pour évaluer la performance.",
+    "sales_2": "Analyse de la navigation, du taux de rebond et de l’abandon de panier pour identifier les points de friction et les pistes d’amélioration.",
+    "sales_3": "Création de landing pages et contribution aux actions d’email marketing visant la conversion des prospects.",
+    "sales_4": "Tableaux de bord et rapports de ventes avec Excel avancé et Looker Studio.",
+    "social_date": "2026 – Aujourd’hui",
+    "social_role": "Community Manager · Analyse des réseaux sociaux",
+    "social_metric": "15 000 → +42 000",
+    "social_metric_desc": "vues mensuelles (croissance d’environ 180 %).",
+    "social_body": "Planification de contenus, suivi des indicateurs des réseaux sociaux et optimisation de la performance digitale, avec analyse comparative des concurrents (portée, engagement, formats et tendances).",
+    "social_note": "Ce résultat concerne les réseaux sociaux et est indépendant des ventes e-commerce.",
+    "education_label": "Formation",
+    "education_title": "Le marketing sur des bases analytiques",
+    "degree": "Licence en Marketing et Direction Commerciale · Mention Marketing Digital",
+    "ibm_description": "Fondements de l’analyse de données, exploration de l’information et communication des résultats pour éclairer les décisions.",
+    "group_research": "Études de marché",
+    "group_analysis": "Analyse et visualisation",
+    "advanced_excel": "Excel avancé",
+    "group_digital": "Marketing digital et e-commerce",
+    "tools_note": "Ces outils reflètent mon expérience professionnelle et les connaissances acquises pendant ma formation ; ils n’ont pas tous été utilisés aux mêmes postes.",
+    "languages_label": "Langues",
+    "languages_title": "Communication sans frontières",
+    "language_es": "Espagnol",
+    "level_es": "Natif",
+    "certificate_es": "Langue maternelle",
+    "language_en": "Anglais",
+    "level_en": "Avancé · C1",
+    "certificate_en": "Certification IELTS",
+    "language_fr": "Français",
+    "level_fr": "Intermédiaire avancé · B2",
+    "certificate_fr": "DELF B2",
+    "language_pt": "Portugais",
+    "level_pt": "Élémentaire · A2",
+    "certificate_pt": "Niveau A2",
+    "contact_label": "Et si nous échangions ?",
+    "contact_title": "<span>Transformons les données</span> <span class=\"accent\">en</span> <span>décisions</span>",
+    "footer_note": "Portfolio professionnel · Aucune donnée interne ni aucun résultat confidentiel."
   }
-
-  function contenido(selector, valor) {
-    const elemento = uno(selector);
-    if (elemento) elemento.innerHTML = valor;
-  }
-
-  function lista(selector, valores) {
-    const elementos = todos(selector);
-    elementos.forEach((elemento, i) => {
-      if (valores[i] !== undefined) {
-        elemento.innerHTML = valores[i];
-      }
-    });
-  }
-
-  // PORTADA Y TÍTULOS
-
-  document.title =
-    "Andrea Saldarriaga | Marketing Intelligence & Consumer Insights";
-
-  texto(".data-header .section-label", "Experiencia profesional");
-
-  contenido(
-    ".data-header .section-title",
-    'Investigación de mercados y análisis de <span style="color:var(--cream)">datos para el negocio</span>'
-  );
-
-  // BANNER EN MOVIMIENTO: MISMA ANIMACIÓN
-
-  const palabras = [
-    "CONSUMER INSIGHTS",
-    "MARKET RESEARCH",
-    "DATA ANALYTICS",
-    "MARKETING INTELLIGENCE",
-    "E-COMMERCE",
-    "REPORTING",
-    "BUSINESS STRATEGY"
-  ];
-
-  todos(".marquee-track > span:not(.dot)").forEach(
-    (elemento, i) => {
-      elemento.textContent = palabras[i % palabras.length];
-    }
-  );
-
-  todos(".marquee-track .dot").forEach(elemento => {
-    elemento.textContent = "●";
+};
+// ========== FIN I18N ==========
+// 01 · IDIOMA: URL → PREFERENCIA GUARDADA → NAVEGADOR → ESPAÑOL
+const root = document.documentElement;
+root.classList.add('js');
+function setLanguage(language, persist = true) {
+  const lang = Object.prototype.hasOwnProperty.call(I18N, language) ? language : 'es';
+  const messages = I18N[lang];
+  document.querySelectorAll('[data-i18n]').forEach(node => {
+    node.textContent = messages[node.dataset.i18n];
   });
-
-  // SOBRE MÍ — SE CONSERVAN LOS SEIS PÁRRAFOS
-
-  lista(".about-text .about-description", [
-    '<strong style="font-weight:700">Soy estudiante de Marketing y Dirección Comercial en la UCAM, con mención en Marketing Digital.</strong><br>Mi experiencia combina investigación de mercados, análisis de datos, inteligencia comercial y marketing digital.',
-
-    'En The Fini Company he participado en proyectos de <strong style="font-weight:700">investigación del consumidor y análisis de mercado.</strong> Mi trabajo consiste en interpretar datos y aportar información útil a los equipos de Brand y Comercial.',
-
-    'Me interesa especialmente <strong style="font-weight:700">transformar preguntas de negocio en investigaciones</strong>, identificar patrones de comportamiento y comunicar hallazgos que ayuden a tomar decisiones.',
-
-    'En Almacenes HJ he trabajado con indicadores comerciales, e-commerce, optimización de la experiencia digital y análisis del rendimiento de contenidos.',
-
-    'Disfruto combinando el rigor analítico con la creatividad y la visión estratégica. Me motiva aprender de diferentes equipos, herramientas y perspectivas.',
-
-    'Busco seguir creciendo profesionalmente en <strong style="font-weight:700">Marketing Intelligence y Consumer Insights.</strong>'
-  ]);
-
-  // EXPERIENCIA PROFESIONAL
-
-  const tarjetas = todos(".data-section .data-card");
-
-  // THE FINI COMPANY
-
-  if (tarjetas[0]) {
-    tarjetas[0].querySelector(".data-card-icon").textContent =
-      "The Fini Company — Marketing Intelligence & Consumer Insights";
-
-    const puntosFini = [
-      "Investigación de mercados y análisis del comportamiento del consumidor para apoyar decisiones de negocio.",
-      "Diseño y análisis de encuestas mediante Toluna, incluyendo filtros y segmentación de datos.",
-      "Segmentación de consumidores por hábitos de compra, generaciones y hogares.",
-      "Análisis de paneles de consumidores NIQ y tendencias de mercado.",
-      "Extracción, limpieza, comparación y visualización de datos.",
-      "Evaluación de campañas y activaciones de marca.",
-      "Elaboración de informes de investigación y presentaciones ejecutivas.",
-      "Síntesis de insights y recomendaciones para apoyar decisiones de Brand y Comercial."
-    ];
-
-    tarjetas[0].querySelectorAll("li").forEach((elemento, i) => {
-      if (puntosFini[i]) elemento.textContent = puntosFini[i];
+  document.querySelectorAll('[data-i18n-html]').forEach(node => {
+    // Solo contenido editorial local; nunca datos de URL ni del visitante.
+    node.innerHTML = messages[node.dataset.i18nHtml];
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach(node => {
+    node.dataset.i18nAttr.split(';').forEach(pair => {
+      const [attribute, key] = pair.split(':');
+      node.setAttribute(attribute, messages[key]);
     });
-
-    tarjetas[0].querySelectorAll(".data-tool").forEach(
-      (elemento, i) => {
-        elemento.textContent = ["Toluna", "NIQ"][i];
+  });
+  root.lang = lang;
+  document.querySelectorAll('[data-lang]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.lang === lang));
+  });
+  if (persist) {
+    try { localStorage.setItem('andrea-language', lang); } catch { /* Navegación privada. */ }
+    try {
+      const url = new URL(location.href);
+      url.searchParams.set('lang', lang);
+      history.replaceState(null, '', url);
+    } catch { /* La lectura local del archivo también funciona. */ }
+  }
+}
+let savedLanguage;
+try { savedLanguage = localStorage.getItem('andrea-language'); } catch { /* Opcional. */ }
+const queryLanguage = new URLSearchParams(location.search).get('lang');
+const browserLanguage = (navigator.language || 'es').slice(0, 2).toLowerCase();
+const initialLanguage = [queryLanguage, savedLanguage, browserLanguage, 'es'].find(lang => Object.prototype.hasOwnProperty.call(I18N, lang));
+setLanguage(initialLanguage, false);
+document.querySelectorAll('[data-lang]').forEach(button => {
+  button.addEventListener('click', () => setLanguage(button.dataset.lang));
+});
+// 02 · MENÚ: ESCAPE Y SELECCIÓN DE ENLACE CIERRAN EL PANEL
+const menuButton = document.querySelector('.menu-toggle');
+const menuLinks = document.querySelector('.nav-links');
+function closeMenu() {
+  menuLinks.classList.remove('open');
+  menuButton.setAttribute('aria-expanded', 'false');
+}
+menuButton.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuLinks.classList.toggle('open', open);
+});
+menuLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+    closeMenu(); menuButton.focus();
+  }
+});
+matchMedia('(min-width: 960px)').addEventListener('change', closeMenu);
+// 03 · APARICIÓN PROGRESIVA; EL CONTENIDO SIN JS SIEMPRE ES VISIBLE
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('pending'); revealObserver.unobserve(entry.target);
       }
-    );
-  }
-
-  // ALMACENES HJ
-
-  if (tarjetas[1]) {
-    tarjetas[1].querySelector(".data-card-icon").textContent =
-      "Almacenes HJ — Analista de Ventas Junior y Community Manager";
-
-    const parrafos = [
-      "Experiencia en análisis de ventas, e-commerce, marketing digital y gestión de contenidos en redes sociales.",
-      "Realicé seguimiento de ventas y del rendimiento comercial mediante Shopify, con foco en identificar oportunidades de mejora.",
-      "Analicé la navegación y el recorrido de compra para detectar puntos de fricción en la experiencia digital.",
-      "Entre mis responsabilidades se encontraban:",
-      "Un resultado destacado de mi trabajo en redes sociales fue el crecimiento de visualizaciones mensuales:",
-      "Esta experiencia reforzó mi capacidad para conectar datos comerciales, comportamiento digital y acciones de marketing."
-    ];
-
-    tarjetas[1].querySelectorAll("p").forEach((elemento, i) => {
-      if (parrafos[i]) elemento.textContent = parrafos[i];
     });
-
-    const puntosHJ = [
-      "Seguimiento de ventas y elaboración de reportes comerciales.",
-      "Análisis de indicadores de e-commerce y apoyo a la creación de landing pages.",
-      "Planificación de contenidos y seguimiento de métricas en redes sociales.",
-      "De 15.000 a más de 42.000 visualizaciones mensuales.",
-      "Crecimiento aproximado del 180 %.",
-      "Resultado correspondiente a redes sociales, independiente de las ventas de e-commerce."
-    ];
-
-    tarjetas[1].querySelectorAll("li").forEach((elemento, i) => {
-      if (puntosHJ[i]) elemento.textContent = puntosHJ[i];
-    });
-  }
-
-  // FORMACIÓN Y HERRAMIENTAS
-
-  if (tarjetas[2]) {
-    tarjetas[2].querySelector(".data-card-icon").textContent =
-      "Formación, herramientas y aprendizaje";
-
-    const formacion = [
-      'Estudio Marketing y Dirección Comercial en la UCAM, con mención en Marketing Digital. Mi trabajo se apoya en herramientas de investigación y análisis como <strong style="color:var(--cream-light)">Toluna, NIQ, Excel, SPSS, Power BI y SQL</strong>, según las necesidades de cada proyecto.',
-
-      'He complementado esta base con el curso <em>Introduction to Data Analytics</em> de IBM. También utilizo Looker Studio, Shopify, Google Analytics y SAP Business One en contextos de análisis y marketing digital.'
-    ];
-
-    tarjetas[2].querySelectorAll("p").forEach((elemento, i) => {
-      if (formacion[i]) elemento.innerHTML = formacion[i];
-    });
-
-    const herramientas = [
-      "Toluna", "NIQ", "Excel",
-      "Power BI", "Shopify", "SQL"
-    ];
-
-    tarjetas[2].querySelectorAll(".data-tool").forEach(
-      (elemento, i) => {
-        if (herramientas[i]) elemento.textContent = herramientas[i];
-      }
-    );
-  }
-
-  // FOTOGRAFÍAS ORIGINALES
-  // Se mantienen las mismas imágenes del primer portfolio.
-
-  const foto = uno(".about-image-wrapper img");
-  if (foto) {
-    foto.src =
-      "https://andreasaldarriagaaa.github.io/Portfolio/img/Foto.jpg";
-  }
-
-  const fotoTrabajo = uno('img[src="img/sample-work.jpg"]');
-  if (fotoTrabajo) {
-    fotoTrabajo.src =
-      "https://andreasaldarriagaaa.github.io/Portfolio/img/sample-work.jpg";
-  }
-
-  // IDIOMAS: MANTENER EL SELECTOR ES / EN / FR
-
-  const nuevosTextos = {
-    es: {
-      nav_about: "Sobre mí",
-      about_label: "Sobre mí",
-      hero_subtitle:
-        "Marketing Intelligence · Consumer Insights · Data Analytics",
-      hero_tagline:
-        "Investigo mercados, interpreto datos y transformo hallazgos en recomendaciones que ayudan a tomar mejores decisiones de negocio.",
-      lang_fr_cert: "DELF B2",
-      contact_title_1: "Convirtamos datos",
-      contact_title_2: "en",
-      contact_title_3: "decisiones"
-    },
-    en: {
-      nav_about: "About me",
-      about_label: "About me",
-      hero_subtitle:
-        "Marketing Intelligence · Consumer Insights · Data Analytics",
-      hero_tagline:
-        "I research markets, interpret data, and turn findings into recommendations that support better business decisions.",
-      lang_fr_cert: "DELF B2",
-      contact_title_1: "Let's turn data",
-      contact_title_2: "into",
-      contact_title_3: "decisions"
-    },
-    fr: {
-      nav_about: "À propos",
-      about_label: "À propos",
-      hero_subtitle:
-        "Marketing Intelligence · Consumer Insights · Data Analytics",
-      hero_tagline:
-        "J'étudie les marchés, j'analyse les données et je transforme les résultats en recommandations pour éclairer les décisions de l'entreprise.",
-      lang_fr_cert: "DELF B2",
-      contact_title_1: "Transformons les données",
-      contact_title_2: "en",
-      contact_title_3: "décisions"
-    }
-  };
-
-  if (typeof translations !== "undefined") {
-    Object.keys(nuevosTextos).forEach(idioma => {
-      Object.assign(translations[idioma], nuevosTextos[idioma]);
-    });
-  }
-
-  if (typeof setLanguage === "function") {
-    setLanguage("es");
-  }
-const correo = document.querySelector(".contact-email");
-if (correo) {
-  correo.textContent = "andrea.saldarriagacadavid04@gmail.com";
-  correo.href = "mailto:andrea.saldarriagacadavid04@gmail.com";
+  }, { threshold: .08 });
+  document.querySelectorAll('.reveal').forEach(node => {
+    node.classList.add('pending'); revealObserver.observe(node);
+  });
 }
-  
-const primerParrafo = document.querySelector(".about-text .about-description");
-if (primerParrafo) {
-  primerParrafo.textContent = "Mi experiencia combina investigación de mercados, análisis de datos, inteligencia comercial y marketing digital.";
+// 04 · PARTÍCULAS: DPR ≤ 2; PAUSA FUERA DE PORTADA Y CON PESTAÑA OCULTA
+const hero = document.querySelector('.hero');
+const particleCanvas = document.querySelector('#particles');
+const particleContext = particleCanvas.getContext('2d');
+let points = [], heroVisible = true, particleFrame = 0, previousTime = 0;
+function resizeParticles() {
+  const ratio = Math.min(devicePixelRatio || 1, 2);
+  const width = hero.clientWidth, height = hero.clientHeight;
+  particleCanvas.width = Math.round(width * ratio);
+  particleCanvas.height = Math.round(height * ratio);
+  if (!particleContext) return;
+  particleContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+  points = Array.from({ length: width < 640 ? 22 : 55 }, () => ({
+    x: Math.random() * width, y: Math.random() * height,
+    radius: .6 + Math.random() * 1.4, speed: 5 + Math.random() * 13
+  }));
 }
+function drawParticles(time) {
+  const delta = Math.min((time - previousTime) / 1000 || 0, .05);
+  previousTime = time;
+  const width = hero.clientWidth, height = hero.clientHeight;
+  particleContext.clearRect(0, 0, width, height);
+  particleContext.fillStyle = '#d4cbc47a';
+  points.forEach(point => {
+    point.y -= point.speed * delta;
+    if (point.y < -3) point.y = height + 3;
+    particleContext.beginPath(); particleContext.arc(point.x, point.y, point.radius, 0, Math.PI * 2); particleContext.fill();
+  });
+  particleFrame = requestAnimationFrame(drawParticles);
+}
+function syncParticles() {
+  cancelAnimationFrame(particleFrame); particleFrame = 0; previousTime = 0;
+  if (particleContext && heroVisible && !document.hidden && !reducedMotion.matches) {
+    particleFrame = requestAnimationFrame(drawParticles);
+  }
+}
+if (particleContext) {
+  resizeParticles(); syncParticles();
+  if ('ResizeObserver' in window) new ResizeObserver(resizeParticles).observe(hero);
+  else window.addEventListener('resize', resizeParticles);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      heroVisible = entries[0].isIntersecting; syncParticles();
+    }).observe(hero);
+  }
+  document.addEventListener('visibilitychange', syncParticles);
+  reducedMotion.addEventListener('change', syncParticles);
+}
+// 05 · CURSOR Y ESTELA SOLO CON RATÓN; ANIMACIÓN SOLO DURANTE EL MOVIMIENTO
+const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+const cursor = document.querySelector('.cursor');
+const trailCanvas = document.querySelector('#trail');
+const trailContext = trailCanvas.getContext('2d');
+let trailPoints = [], trailFrame = 0;
+function resizeTrail() {
+  const ratio = Math.min(devicePixelRatio || 1, 2);
+  trailCanvas.width = Math.round(innerWidth * ratio);
+  trailCanvas.height = Math.round(innerHeight * ratio);
+  if (trailContext) trailContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+}
+function drawTrail(time) {
+  trailContext.clearRect(0, 0, innerWidth, innerHeight);
+  trailPoints = trailPoints.filter(point => time - point.time < 180);
+  if (trailPoints.length > 1) {
+    trailContext.beginPath(); trailContext.moveTo(trailPoints[0].x, trailPoints[0].y);
+    trailPoints.forEach(point => trailContext.lineTo(point.x, point.y));
+    trailContext.strokeStyle = '#b8afa89a'; trailContext.lineWidth = 1.5; trailContext.stroke();
+  }
+  trailFrame = trailPoints.length ? requestAnimationFrame(drawTrail) : 0;
+}
+function syncCursor() {
+  const enabled = finePointer.matches && !reducedMotion.matches && Boolean(trailContext);
+  root.classList.toggle('cursor-enabled', enabled);
+  if (!enabled) {
+    cancelAnimationFrame(trailFrame); trailFrame = 0; trailPoints = [];
+    cursor.style.opacity = '0';
+    if (trailContext) trailContext.clearRect(0, 0, innerWidth, innerHeight);
+  } else resizeTrail();
+}
+document.addEventListener('pointermove', event => {
+  if (!root.classList.contains('cursor-enabled') || event.pointerType !== 'mouse') return;
+  cursor.style.transform = `translate(${event.clientX - 4}px, ${event.clientY - 4}px)`;
+  cursor.style.opacity = '1';
+  trailPoints.push({ x: event.clientX, y: event.clientY, time: performance.now() });
+  if (!trailFrame) trailFrame = requestAnimationFrame(drawTrail);
+}, { passive: true });
+document.addEventListener('pointerout', event => {
+  if (!event.relatedTarget) cursor.style.opacity = '0';
+});
+window.addEventListener('resize', () => { if (root.classList.contains('cursor-enabled')) resizeTrail(); });
+finePointer.addEventListener('change', syncCursor);
+reducedMotion.addEventListener('change', syncCursor);
+syncCursor();
 
-const bannerFotos = document.querySelector('img[src*="sample-work.jpg"]');
-if (bannerFotos) {
-  bannerFotos.parentElement.parentElement.remove();
-}
-})();
 </script>
 </body>
 </html>
